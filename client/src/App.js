@@ -1,7 +1,8 @@
+import Home from "./Home";
 
 function App() {
   return (
-    <div className="m-auto"> TP - IGL </div>
+   <Home/>
   );
 }
 
