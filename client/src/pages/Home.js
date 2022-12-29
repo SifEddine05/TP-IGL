@@ -1,7 +1,7 @@
-import ss from './photos/logo.png'
-import ff from './photos/facebook.svg'
-import ii from './photos/instagram.svg'
-import ll from './photos/linkedin.png'
+import ss from '../photos/logo.png'
+import ff from '../photos/facebook.svg'
+import ii from '../photos/instagram.svg'
+import ll from '../photos/linkedin.png'
 const Home = () => {
     return ( 
      <div>
