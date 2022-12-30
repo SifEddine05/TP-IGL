@@ -33,12 +33,12 @@ const Login = () => {
             </div>
             <h3 className="lg:text-[28px] md:text-[22px] sm:text-[16px] text-[13px] font-medium text-center lg:py-5 md:py-4 sm:py-3 py-2"> Welcome back! </h3>
             <div className="flex justify-center lg:py-5 md:py-4 sm:py-3 py-2 w-full">
-                <input  type="email"className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] focus:border-gray-600 focus:outline-none w-[45%] border-2  border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Email address"  />
+                <input  type="email"className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Email address"  />
              </div>
 
              <div className="flex justify-center lg:py-5 md:py-4 sm:py-3 py-2 w-full">
                  <div className="w-[45%] relative">
-                    <input  type={type} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] focus:border-gray-600 focus:outline-none w-full border-2  border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Password"  />
+                    <input  type={type} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Password"  />
                   {!show  && 
                     <div className="w-[10%] absolute top-3  right-4 hover:cursor-pointer" onClick={handlClick } >
                       <img src={eye} alt="close eye" />
