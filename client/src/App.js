@@ -1,8 +1,11 @@
 import Home from "./Home";
+import CardDetails from "./CardDetails";
 
 function App() {
   return (
-   <Home/>
+    <div><CardDetails /></div>
+   //<Home/>
+   
   );
 }
 
