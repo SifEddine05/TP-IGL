@@ -7,18 +7,18 @@ import tt from './photos/talk.png'
 const CardDetails = () => {
     return ( 
         <div>
-           <div className=" bg-[#FF5D02] pt-[2%] mb-[] pl-[5%] pr-[5%] flex justify-between ">
-               <div className="w-[100px] pt-[-5%]"><img src={ss} alt='ss'/></div>
-             
-                    <div className="pl-[20%]">Explore</div>
-                    <div>Profile</div>
-                    <div>Log out</div>
-                    
-               
-               <div className="w-[20px] "><img  src={mm} alt='mm'/></div>
-               <div className="w-[20px] "><img src={nn} alt='nn'/></div>
-                    <div className=""><button className="rounded-full pl-[25px] pr-[25px] pt-[10px] pb-[10px] bg-black text-white ">+ listing</button></div>
-              
+           <div className=" bg-[#FF5D02] w-full pt-[2%] mb-[] pl-[5%] pr-[5%] flex justify-between">
+               <div className="w-[10%] pt-[-5%]"><img src={ss} alt='ss'/></div>
+               <div className="w-[25%] flex justify-between">
+                    <div className="">Explore</div>
+                    <div className="text-sm">Profile</div>
+                    <div className="text-sm ">Log out</div>
+               </div>    
+               <div className="w-[20%]  flex justify-between">
+                    <div className="w-[8%]   "><img  src={mm} alt='mm'/></div>
+                    <div className="w-[8%] "><img src={nn} alt='nn'/></div>
+                    <div className=""><button className="rounded-full w-full pl-[25px] pr-[25px] pt-[10px] pb-[10px] bg-black text-white ">+ listing</button></div>
+               </div>
            </div>
 
 
@@ -62,13 +62,13 @@ const CardDetails = () => {
                          <div className="mt-[5%] text-sm">Location</div>
                          <div className="mt-[3%] text-sm">Cité de Amir Abdelkader,Azazga, Tizi Ouzou</div>
                          <div className="w-full flex mt-[5%] ml-[5%]">
-                              <div className="w-full "><button className="flex rounded-full bg-black pl-[5%] pr-[5%] pt-[2%] pb-[2%] " >
+                              <div className="w-full ml-[5%] "><button className="flex rounded-full bg-black pl-[9%] pr-[9%] pt-[3%] pb-[2%] " >
                                    <div className="flex"><img src={aa} alt='aa'/></div>
                                    <div className="w-full pl-[2%] text-white">Call owner</div>
                                    </button></div>
-                              <div className="w-full"><button className=" flex pt-[2%] pb-[2%] pl-[7%] pr-[7%] rounded-full border-2">
+                              <div className="w-full mr-[28%]"><button className=" flex pt-[3%] pb-[2%] pl-[9%] pr-[9%] rounded-full border-2 border-black ">
                                    <div><img src={tt} alt='tt'/></div>
-                                   <div className=" w-full pl-[2%]">Message owner</div>
+                                   <div className=" w-full pl-[2%] ">Message owner</div>
                                    </button></div>
                          </div>
                     </div>
