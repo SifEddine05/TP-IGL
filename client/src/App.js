@@ -1,11 +1,13 @@
-import Home from "./Home";
-import CardDetails from "./CardDetails";
+
+import Nav from "./components/nav";
+import Home from "./pages/Home";
+import Login from "./pages/Login"
+import PropertiesFeed from "./pages/PropertiesFeed";
+import SignUp from "./pages/SignUp"
 
 function App() {
   return (
-    <div><CardDetails /></div>
-   //<Home/>
-   
+<PropertiesFeed />
   );
 }
 
