@@ -1,11 +1,13 @@
-import Home from "./Home";
-import CardDetails from "./CardDetails";
+//import Home from "./Home";
+//import CardDetails from "./CardDetails";
+import Profile from "./Profile";
 
 function App() {
   return (
-    <div><CardDetails /></div>
+    
+    <div><Profile /></div>
    //<Home/>
-   
+   //<CardDetails />
   );
 }
 
