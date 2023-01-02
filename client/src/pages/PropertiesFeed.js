@@ -22,32 +22,32 @@ const PropertiesFeed = () => {
     <div>
         <Nav num={true} />
 
-        <div className='flex justify-between items-center px-3 border-b-2'>
+        <div className='flex justify-between items-center lg:px-3 md:px-2 px-1 border-b-2'>
             <div className='flex justify-around items-center w-[80%] pt-2 '>
-                <div className=' border-2 border-black  shadow-lg p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer w-[5%]'><img src={house} alt="house" className='w-[100%]' /></div>
-                <div className='p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer w-[7%]'><img src={tiny} alt="house" className='w-[100%]' /></div>
-                <div className='p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer w-[7%]'><img src={lux} alt="house" className='w-[100%]' /></div>
-                <div className='p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer w-[7%]'><img src={apartements} alt="house" className='w-[100%]' /></div>
-                <div className='p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer  w-[7%]'><img src={bun} alt="house" className='w-[100%]' /></div>
-                <div className='p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer w-[5%]'><img src={farms} alt="house" className='w-[100%]' /></div>
-                <div className='p-2 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer w-[5%]'><img src={lands} alt="house" className='w-[100%]' /></div>
+                <div className=' border-2 border-black  shadow-lg md:p-2 p-1 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer lg:w-[7%] w-[10%]'><img src={house} alt="house" className='w-[100%]' /></div>
+                <div className=' rounded-3xl hover:bg-black md:p-2 p-1 hover:bg-opacity-5 hover:cursor-pointer lg:w-[9%] w-[15%]'><img src={tiny} alt="house" className='w-[100%]' /></div>
+                <div className='rounded-3xl hover:bg-black md:p-2 p-1 hover:bg-opacity-5 hover:cursor-pointer lg:w-[9%] w-[15%]'><img src={lux} alt="house" className='w-[100%]' /></div>
+                <div className='rounded-3xl hover:bg-black md:p-2 p-1 hover:bg-opacity-5 hover:cursor-pointer lg:w-[9%] w-[15%]'><img src={apartements} alt="house" className='w-[100%]' /></div>
+                <div className=' rounded-3xl hover:bg-black md:p-2 p-1 hover:bg-opacity-5 hover:cursor-pointer  lg:w-[9%] w-[15%]'><img src={bun} alt="house" className='w-[100%]' /></div>
+                <div className='md:p-2 p-1 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer lg:w-[7%] w-[10%]'><img src={farms} alt="house" className='w-[100%]' /></div>
+                <div className='md:p-2 p-1 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer lg:w-[7%] w-[10%]'><img src={lands} alt="house" className='w-[100%]' /></div>
             </div>
-            <div className='w-[10%] mr-10 '>
-                <button onClick={handlClick} className='flex justify-center items-center p-2  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 text-[16px] font-bold rounded-full border-2 border-black px-4'> <img src={ssss} alt='filter' className='w-[25%] pr-2'/>Filter</button>
+            <div className='w-[10%] lg:mr-10 md:mr-8 sm:mr-6 mr-4 '>
+                <button onClick={handlClick} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1'> <img src={ssss} alt='filter' className='w-[22%]  mr-2'/>Filter</button>
             </div>
         </div>
 
-     {filter &&   <div className='flex justify-around items-center pt-2 border-b-2 p-2'>
-            <div>
-                <select className="select w-full max-w-xs bg-white p-2 text-[16px] hover:cursor-pointer rounded-full border-2 opacity-75 focus:opacity-100 border-black">
-                    <option hidden selected>State</option>
-                    <option >Gjjj</option>
-                    <option>hhhh</option>
-                    <option>kkkk</option>
+     {filter &&   <div className='flex justify-around items-center md:pt-2 pt-1 border-b-2 md:p-2 p-1 w-[100%]'>
+            <div className="">
+                <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full border-2 opacity-75 focus:opacity-100 border-black">
+                    <option hidden selected className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>State</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Gjjj</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>hhhh</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>kkkk</option>
                 </select>
             </div>
             <div>
-                <select className="select w-full max-w-xs bg-white p-2 text-[16px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
+                <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
                     <option hidden selected>City</option>
                     <option >Gjjj</option>
                     <option>hhhh</option>
@@ -55,20 +55,20 @@ const PropertiesFeed = () => {
                 </select>
             </div>
             <div className='flex justify-start items-center'>
-                <h5 className='text-[16px] pr-4'>Date range</h5>
-                <input type="date" className='border-2 mr-4 border-black p-2 rounded-full hover:cursor-pointer'/>
-                <input type="date" className='border-2 border-black p-2 rounded-full hover:cursor-pointer'/>
+                <h5 className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:pr-4 md:pr-3 sm:pr-2 pr-1 text-right'>Date range</h5>
+                <input type="date" className='border-2 lg:mr-4 md:mr-3 sm:mr-2 mr-1  border-black md:p-2 p-1 lg:text-[14px] md:text-[12px] sm:text-[10px] text-[8px] rounded-full hover:cursor-pointer'/>
+                <input type="date" className='border-2 border-black md:p-2 p-1 rounded-full hover:cursor-pointer lg:text-[14px] md:text-[12px] sm:text-[10px] text-[8px]'/>
             </div>
 
             <div className='flex justify-start items-center'>
-                <h5 className='text-[16px] pr-4'>Budget range</h5>
-                <input type="number" placeholder='Min' className='border-2 w-[15%] mr-4 border-black p-2 rounded-full hover:cursor-pointer'/>
-                <input type="number" placeholder='Max' className='border-2  w-[15%] border-black p-2 rounded-full hover:cursor-pointer'/>
+                <h5 className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:pr-4 md;pr-3 sm:pr-2 pr-1 text-right'>Budget range</h5>
+                <input type="number" placeholder='Min' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-2 p-1 rounded-full hover:cursor-pointer'/>
+                <input type="number" placeholder='Max' className='border-2  lg:w-[17%] w-[33%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] border-black md:p-2 p-1 rounded-full hover:cursor-pointer'/>
             </div>
             
-            <button className='rounded-full text-[18px] border-2 border-black px-4 hover:bg-slate-600 hover:text-white'>filter</button>
+            <button className='rounded-full lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1 hover:bg-slate-600 hover:text-white'>filter</button>
         </div>}
-        <div className='mt-4 mx-auto flex justify-around flex-wrap items-center w-[90%]'>
+        <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-[90%]'>
             <Card/>
             <Card/>
             <Card/>
@@ -81,14 +81,14 @@ const PropertiesFeed = () => {
             <Card/>
             <Card/>
             <Card/>
-            <Card/>
+        
            
         </div>
-        <div className="flex justify-center w-full py-2 gap-2">
-            <a href="#item1" className="btn btn-xs ">1</a> 
-            <a href="#item2" className="btn btn-xs">2</a> 
-            <a href="#item3" className="btn btn-xs">3</a> 
-            <a href="#item4" className="btn btn-xs">4</a>
+        <div className="flex justify-center w-full py-2 mb-2 gap-2">
+            <a href="#item1" className="btn btn-xs rounded-full mx-2 ">1</a> 
+            <a href="#item2" className="btn btn-xs rounded-full mx-2 ">2</a> 
+            <a href="#item3" className="btn btn-xs rounded-full mx-2 ">3</a> 
+            <a href="#item4" className="btn btn-xs rounded-full mx-2 ">4</a>
         </div>
        
     </div> );

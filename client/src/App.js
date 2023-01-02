@@ -8,8 +8,8 @@ import SignUp from "./pages/SignUp"
 
 function App() {
   return (
-<PropertiesFeed />
-  );
+<CardDetails />
+    );
 }
 
 export default App;
