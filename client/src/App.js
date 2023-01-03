@@ -1,4 +1,5 @@
 
+
 import Nav from "./components/nav";
 import CardDetails from "./pages/CardDetails";
 import Home from "./pages/Home";
@@ -10,6 +11,7 @@ function App() {
   return (
 <CardDetails />
     );
+>
 }
 
 export default App;
