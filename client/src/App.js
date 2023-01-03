@@ -1,16 +1,17 @@
-//import Home from "./Home";
-//import CardDetails from "./CardDetails";
-//import Profile from "./Profile";
-import Editprofile from "./Editprofile";
+
+
+import Nav from "./components/nav";
+import CardDetails from "./pages/CardDetails";
+import Home from "./pages/Home";
+import Login from "./pages/Login"
+import PropertiesFeed from "./pages/PropertiesFeed";
+import SignUp from "./pages/SignUp"
 
 function App() {
   return (
-    
-    <div><Editprofile/></div>
-    //<Profile />
-   //<Home/>
-   //<CardDetails />
-  );
+<CardDetails />
+    );
+>
 }
 
 export default App;
