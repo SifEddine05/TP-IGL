@@ -51,13 +51,13 @@ function DragDrop(props) {
     <div className="my-2">
       
       <DropBox onDrop={onDrop} />
-    {alert &&  <div className="alert alert-error shadow-lg mt-2 flex justify-between">
-          <div className="flex">
-            <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span>Error! one of the files selected is not an image it will be delted automticaly </span>
+    {alert &&  <div className="alert alert-error shadow-lg mt-2 flex justify-between w-[90%] mx-auto">
+          <div className="flex ">
+            <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 lg:h-6 md:h-5 sm:h-4 h-3 lg:w-6 md:w-5 sm:h-4 h-3" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] '>Error! one of the files selected is not an image it will be delted automticaly </span>
           </div>
           <div>
-            <button className="btn btn-sm btn-primary" onClick={accept}>Accept</button>
+            <button className=" lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] btn btn-sm btn-primary" onClick={accept}>Accept</button>
           </div>
       </div> }
       <div className="container flex items-center flex-warp w-[90%] mt-2 relative ">
