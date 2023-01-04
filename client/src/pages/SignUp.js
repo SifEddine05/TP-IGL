@@ -48,7 +48,8 @@ const SignUp = () => {
                 </div>
                 <h3 className="lg:text-[28px] md:text-[22px] sm:text-[16px] text-[13px] font-medium text-center sm:py-3 py-2"> Create you account </h3>
                 <div className="flex justify-center sm:py-3 py-2 w-full">
-                    <input  type="text"className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Full Name"  />
+                    <input  type="text" className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[22%] mr-[1%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="First Name"  />
+                    <input  type="text" className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[22%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Last Name"  />
                  </div>
                 <div className="flex justify-center sm:py-3 py-2 w-full">
                     <input  type="email"className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Email address"  />
