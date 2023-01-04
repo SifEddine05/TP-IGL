@@ -8,7 +8,7 @@ import PropertiesFeed from "./pages/PropertiesFeed";
 import SignUp from "./pages/SignUp"
 import NewListing from "./pages/NewListing"
 import Profile from "./pages/Profile"
-import Editprofile from "./Editprofile";
+import Editprofile from "./pages/Editprofile";
 
 function App() {
   return (
