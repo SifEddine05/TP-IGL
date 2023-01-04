@@ -7,11 +7,12 @@ import Login from "./pages/Login"
 import PropertiesFeed from "./pages/PropertiesFeed";
 import SignUp from "./pages/SignUp"
 import NewListing from "./pages/NewListing"
+import Profile from "./pages/Profile"
+import Editprofile from "./Editprofile";
 
 function App() {
   return (
-
-<NewListing />
+<Editprofile />
 );
 
 }

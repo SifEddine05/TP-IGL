@@ -68,7 +68,7 @@ const NewListing = () => {
                         <img src={lands} alt="home" className="w-[80%] "/>
                     </label>
                 </div>
-                <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4 flex justify-between items-center w-[90%] mx-auto ">
+                <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4 flex juNewListingstify-between items-center w-[90%] mx-auto ">
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col ">Area (m²)<br/>
                     <input type="number" maxLength="10" min="0" id="Area" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] p-2 px-[10%] rounded-full border-2 border-black"/>
                     </label>
