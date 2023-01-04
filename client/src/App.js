@@ -10,7 +10,9 @@ import NewListing from "./pages/NewListing"
 
 function App() {
   return (
-<NewListing />     );
+
+<NewListing />
+);
 
 }
 

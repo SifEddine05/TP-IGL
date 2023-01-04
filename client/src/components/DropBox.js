@@ -52,13 +52,13 @@ function DropBox({ onDrop }) {
   return (
     <>
       {' '}
-      <section className="dropbox border-dashed border-4 border-black">
+      <section className="dropbox border-dashed border-4 border-black rounded-lg">
         <Container
           className="dropbox"
           {...getRootProps({ isDragAccept, isFocused, isDragReject })}
         >
           <input {...getInputProps()} />
-          <p>Drag 'n' drop some files here</p>
+          <p>Upload or drag your property images here</p>
           <button type="button" className="btn" onClick={open}>
             Click to select file
           </button>

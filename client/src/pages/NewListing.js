@@ -81,12 +81,11 @@ const NewListing = () => {
                     <input type="number" maxLength="10" min="0" id="Area" placeholder="" className="text-[16px] p-2 px-[10%] rounded-full border-2 border-black"/>
                     </label>
                     <label className="text-[16px] w-[30%] flex justify-center flex-col items-center text-left">Dimensions (m) <br/>
-                    <div className="flex justify-start w-[50%] items-center ">
-                        <input type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="w-[75%] text-[16px] p-2 px-[15%] rounded-full border-2 border-black"/>
-                         <h3 className="text-[16px] font-bold">X</h3>
-                        <input type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="w-[75%] text-[16px] p-2 px-[15%] rounded-full border-2 border-black"/>
-                    </div>
-                    
+                        <div className="flex justify-start w-[50%] items-center ">
+                            <input type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="w-[75%] text-[16px] p-2 px-[15%] rounded-full border-2 border-black"/>
+                            <h3 className="text-[16px] font-bold">X</h3>
+                            <input type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="w-[75%] text-[16px] p-2 px-[15%] rounded-full border-2 border-black"/>
+                        </div>
                     </label>
                     <label className="text-[16px] w-[30%] flex justify-center flex-col  ">Number of rooms<br/>
                     <input type="number" maxLength="3" min="0" id="Number_of_rooms" placeholder="" className="text-[16px] p-2 px-[15%] rounded-full border-2 border-black"/>
@@ -108,9 +107,46 @@ const NewListing = () => {
                     </div>
                    
                 </div>
+
                 <div className="w-[90%]  ml-[5%]">
                      <DragDrop /> 
                 </div>
+
+                <div className="pt-10  flex justify-between items-center w-[90%] mx-auto ">
+                    <label className="text-[16px] w-[30%] flex justify-center flex-col ">State<br/>
+                        <div className="w-full">
+                            <select className="w-full p-3  px-[10%] bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
+                                <option hidden selected></option>
+                                <option >Gjjj</option>
+                                <option>hhhh</option>
+                                <option>kkkk</option>
+                            </select>
+                        </div>                    
+                    </label>
+                    <label className="text-[16px] w-[30%] flex justify-center flex-col ">City<br/>
+                        <div className="w-full">
+                            <select className="w-full p-3  px-[10%] bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
+                                <option hidden selected></option>
+                                <option >Gjjj</option>
+                                <option>hhhh</option>
+                                <option>kkkk</option>
+                            </select>
+                        </div>                    
+                    </label>
+                    <label className="text-[16px] w-[30%] flex justify-center flex-col  ">Street<br/>
+                    <input type="text" maxLength="30"  id="Street" placeholder="" className="text-[16px] p-2 px-[15%] rounded-full border-2 border-black"/>
+                    </label>
+                </div>
+
+                <div className="my-[75px] w-[90%] mx-auto">
+                    <label className="text-[16px] w-[100%] flex justify-center flex-col  ">Description<br/>
+                    <textarea id="Description" name="Description" rows="8" cols="50" className=" p-6 text-[16px] mt-2 border-2 border-black rounded-lg"></textarea>                    </label>
+                </div>
+                <div className="flex justify-end  pb-10">
+                    <button className="p-3 border-2 mr-6 border-black rounded-full text-center text-[16px] shadow-md hover:bg-black hover:bg-opacity-20">Save draft</button>
+                    <button className="p-3 border-2 border-black bg-black rounded-full text-center text-white text-[16px]  shadow-md hover:bg-[#002E7C] px-6">Publish</button>
+                </div>
+
             </div>
         </div>
        
