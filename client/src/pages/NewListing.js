@@ -29,6 +29,93 @@ const NewListing = () => {
         }
     }
     
+    const [style1,setStyle1]=useState("bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer") 
+    const [style2,setStyle2]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    const [style3,setStyle3]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    const [style4,setStyle4]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    const [style5,setStyle5]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    const [style6,setStyle6]=useState("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    const [style7,setStyle7]=useState("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    const chooseType =(e)=>{
+        if(e.target.value==="house")
+        {
+            setStyle1("bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+            setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+      
+        }
+        else if (e.target.value==="tiny")
+        {
+            setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle2(" bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+            setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+      
+        }
+        else if (e.target.value==="lux")
+        {
+            setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle2(" md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle3(" bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+            setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+      
+        }
+        else if (e.target.value==="appartements")
+        {
+            setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle4("bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+            setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+      
+        }
+        else if (e.target.value==="bun")
+        {
+            setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle5("bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+            setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+      
+        }
+        else if (e.target.value==="farms")
+        {
+            setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle6("bg-[#FF5D02] md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+            setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+      
+        }
+        else if (e.target.value==="lands")
+        {
+            setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
+            setStyle7("bg-[#FF5D02] md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center  hover:cursor-pointer")
+        }
+    }
+
+
     return ( 
     <div>
         <Nav num={true} />
@@ -39,36 +126,36 @@ const NewListing = () => {
             <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4  lg:pl-6 md:pl-4 sm:pl-3 pl-2 ">
                 <h3 className="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] lg:pb-4 md:pb-3 pb-2">Type of property</h3>
                 <div className="flex justify-around items-center w-[90%] mx-auto">
-                    <input type="radio" name="type" id="house" value="house" className="hidden" />
-                    <label htmlFor="house" className=" bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer">
-                        <img src={house} alt="home" className="w-[80%] "/>
+                    <input type="radio" name="type" id="house" value="house" className="hidden" onClick={chooseType}/>
+                    <label htmlFor="house" className={style1}>
+                        <img src={house} alt="home" className="w-[80%] p-1"/>
                     </label>
-                    <input type="radio" name="type" id="" className="hidden" value="Tiny" />
-                    <label htmlFor="Tiny" className="md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer">
+                    <input type="radio" name="type" id="tiny" className="hidden" value="tiny" onClick={chooseType} />
+                    <label htmlFor="tiny" className={style2}>
                         <img src={tiny} alt="home" className="w-full "/>
                     </label>
-                    <input type="radio" name="type" id="lux" className="hidden" value="lux"/>
-                    <label htmlFor="lux"  className="md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer">
+                    <input type="radio" name="type" id="lux" className="hidden" value="lux" onClick={chooseType}/>
+                    <label htmlFor="lux"  className={style3}>
                         <img src={lux} alt="home" className=" w-full "/>
                     </label>
-                    <input type="radio" name="type" id="appartements" className="hidden" value="appartements" />
-                    <label htmlFor="appartements"  className="md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer">
+                    <input type="radio" name="type" id="appartements" className="hidden" value="appartements" onClick={chooseType} />
+                    <label htmlFor="appartements"  className={style4}>
                         <img src={apartements} alt="home" className=" w-full "/>
                     </label>
-                    <input type="radio" name="type" id="bun" className="hidden" value="bun"/>
-                    <label htmlFor="bun"  className="md:w-[11%] w-[15%]">
-                        <img src={bun} alt="home" className="w-full rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer"/>
+                    <input type="radio" name="type" id="bun" className="hidden" value="bun" onClick={chooseType}/>
+                    <label htmlFor="bun"  className={style5}>
+                        <img src={bun} alt="home" className="w-full "/>
                     </label>
-                    <input type="radio" name="type" id="farms" className="hidden" value="farms" />
-                    <label htmlFor="farms"  className="md:w-[10%] w-[14%] rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer">
-                      <img src={farms} alt="home" className="w-[80%] "/>
+                    <input type="radio" name="type" id="farms" className="hidden" value="farms" onClick={chooseType}/>
+                    <label htmlFor="farms"  className={style6}>
+                      <img src={farms} alt="home" className="w-[80%] p-1"/>
                     </label>
-                    <input type="radio" name="type" id="lands" className="hidden" value="lands" />
-                    <label htmlFor="lands"  className="md:w-[11%] w-[15%] rounded-2xl border-2  p-2 md:px-4 px-2  border-black lg:h-[120px] md:h-[100px] sm:h-[80px] h-[60px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer">
-                        <img src={lands} alt="home" className="w-[80%] "/>
+                    <input type="radio" name="type" id="lands" className="hidden" value="lands" onClick={chooseType}/>
+                    <label htmlFor="lands"  className={style7}>
+                        <img src={lands} alt="home" className="w-[80%] p-1 "/>
                     </label>
                 </div>
-                <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4 flex juNewListingstify-between items-center w-[90%] mx-auto ">
+                <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4 flex justify-between items-center w-[90%] mx-auto ">
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col ">Area (m²)<br/>
                     <input type="number" maxLength="10" min="0" id="Area" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] p-2 px-[10%] rounded-full border-2 border-black"/>
                     </label>

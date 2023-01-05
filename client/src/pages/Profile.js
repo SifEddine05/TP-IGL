@@ -6,11 +6,13 @@ import ll from '../photos/localisation.png'
 import kk from '../photos/watch.png'
 import Nav from '../components/nav'
 import Card from '../components/card';
+import { useState } from 'react'
 
 const Profile = () => {
+  
     return ( 
        <div>
-            <Nav num={false} />
+            <Nav num={false} /> 
             <div className="m-[3%] ">
             <div className="rounded-full bg-white  flex justify-between  p-2 ">
                 <div className="md:w-[20%] lg:w-[15%] sm:w-[20%] w-[25%] flex justify-between items-center">
@@ -49,7 +51,7 @@ const Profile = () => {
                 <div className='md:w-[10%] w-[15%]'><img src={kk} alt='kk' className='w-[100%]'/></div>
                 <div className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] ml-[1%] mt-[0.25%]">Watchlist</div>
             </div>
-            <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-start flex-wrap items-center w-[95%] mx-auto'>
+            <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 flex justify-start flex-wrap items-center w-[95%] mx-auto'>
                 <Card/>
                 <Card/>
                 

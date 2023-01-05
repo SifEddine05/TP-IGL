@@ -12,7 +12,7 @@ import Editprofile from "./pages/Editprofile";
 
 function App() {
   return (
-<SignUp />
+<Profile />
 );
 
 }
