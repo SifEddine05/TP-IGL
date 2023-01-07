@@ -1,8 +1,8 @@
 const Editprofile = () => {
     return (  
-        <div className="">
+        <div className="bg-[#fffff5] h-full">
              <div className="text-sm mt-[3%] ml-[20%] text-[#767676] ">Edit Profile</div>
-            <div className="pl-[2%] pr-[2%]  ml-[20%] mr-[20%] rounded-xl pt-[2%] mt-[2%] pb-[2%]  border-2">
+            <div className="pl-[2%] pr-[2%]  ml-[20%] mr-[20%] bg-white rounded-xl pt-[2%] mt-[2%] pb-[2%]  ">
             
             <div>
                
@@ -44,7 +44,7 @@ const Editprofile = () => {
               <div className="mt-[2%] flex justify-end"><button className="text-white bg-black rounded-full p-[1%] font-bold">Save Changes</button></div>
             </div>
             
-
+         
         </div>
     );
 }
