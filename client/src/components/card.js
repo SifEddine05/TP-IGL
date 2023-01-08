@@ -3,11 +3,15 @@ import imgg from "../photos/images.png"
 import lov from "../photos/love.svg"
 import lovr from "../photos/lovered.svg"
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 
 
 const Card = () => {
+    //    <div className="rounded-xl lg:w-[17%] w-[20%] relative shadow-md lg:my-8 md:my-6 sm:my-4 my-2  lg:mx-6 md:mx-4 mx-2 ">
+
     return ( 
-    <div className="rounded-xl lg:w-[17%] w-[20%] relative shadow-md lg:my-8 md:my-6 sm:my-4 my-2  lg:mx-6 md:mx-4 mx-2 ">
+    <Link to="/Card/id" className="lg:w-[18%] w-[20%] lg:mx-6 md:mx-4 mx-2">
+    <div className="rounded-xl w-full relative shadow-md lg:my-8 md:my-6 sm:my-4 my-2  lg:mx-6 md:mx-4 mx-2 ">
             <img src={lov} alt="lov"  className="absolute top-4 right-3 w-[12%] hover:cursor-pointer"/>
             <img src={imgg} alt="pht" className="w-full" />
             <div className=" p-1 flex justify-between">
@@ -34,6 +38,7 @@ const Card = () => {
             </div>
             
     </div> 
+    </Link>
         
     );
 }

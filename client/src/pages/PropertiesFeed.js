@@ -9,10 +9,10 @@ import lands from '../photos/lands.svg'
 import ssss from '../photos/ssss.svg'
 import { useState } from 'react';
 import Card from '../components/card';
+import { Link } from 'react-router-dom';
 
 
 const PropertiesFeed = () => {
-    //const[select,setSelect]=useState([true,false,false,false,false,false,false])
     const [filter,setFilter] =useState(false)
     const handlClick=()=>{
             if(filter)setFilter(false)

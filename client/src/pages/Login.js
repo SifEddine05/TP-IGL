@@ -5,6 +5,7 @@ import eye from "../photos/eye.png"
 import eyeOpen from "../photos/eyeO.png"
 import google from "../photos/google.svg"
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [show , setShow]=useState(false)
@@ -72,7 +73,7 @@ const Login = () => {
             </div>
 
             <div className="w-[50%] mx-auto lg:py-7 md:py-5 sm:pt-3 pt-2">
-                <p className="text-center lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] ">Don t have an account ? <a href="/signup" className="underline hover:text-[#177aeb]">Sign Up</a></p>
+                <p className="text-center lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] ">Don t have an account ? <Link to="/SignUp" className="underline hover:text-[#177aeb]">Sign Up</Link></p>
             </div>
         </div>
 

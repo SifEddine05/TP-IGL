@@ -3,6 +3,8 @@ import ff from '../photos/facebook.svg'
 import ii from '../photos/instagram.svg'
 import ll from '../photos/linkedin.png'
 import logo from "../photos/logo1.svg"
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
     return ( 
@@ -14,8 +16,8 @@ const Home = () => {
                          <h3 className="lg:text-[36px] md:text-[26px] sm:text-[20px] text-[17px] font-black md:p-2 p-1 ">DARNAB</h3>
                    </div>
                   <div className="flex pt-[2%] items-center">
-                             <a href="/login" className="underline hover:text-white underline-offset-1 lg:pr-[40px] md:pr-[30px] sm:pr-[20px] pr-[10px] sm:text-sm md:text-md lg:text-lg text-xs">Sign in</a>
-                             <a href="/signup"className="mt-[-4%]"><button className="border-2 border-black hover:bg-[#fff]   hover:text-black rounded-full text-white bg-black sm:text-sm md:text-md lg:text-lg text-xs pl-[30%] pr-[30%]">Get started</button></a>
+                             <Link to="/Login" className="underline hover:text-white underline-offset-1 lg:pr-[40px] md:pr-[30px] sm:pr-[20px] pr-[10px] sm:text-sm md:text-md lg:text-lg text-xs">Sign in</Link>
+                             <Link to="/SignUp"className="mt-[-4%]"><button className="border-2 border-black hover:bg-[#fff]   hover:text-black rounded-full text-white bg-black sm:text-sm md:text-md lg:text-lg text-xs pl-[30%] pr-[30%]">Get started</button></Link>
                   </div>           
              </div>
 
@@ -27,8 +29,8 @@ const Home = () => {
                </div>
                </div>
                <div className="flex justify-center mt-[5%] items-center">
-                    <a href="/login" className="rounded-full  hover:bg-[#fff]    p-2 hover:text-black  bg-black text-white pl-[2%] pr-[2%] mr-[20px]  sm:text-sm md:text-md lg:text-lg text-xs">Get started</a>
-                    <a href="/login" className="rounded-full border-black border-2  hover:bg-slate-400 hover:bg-opacity-50 mr-[20px] p-2  sm:text-sm md:text-md lg:text-lg text-xs">Explore proeprities</a>
+                    <Link to="SignUp" className="rounded-full  hover:bg-[#fff]    p-2 hover:text-black  bg-black text-white pl-[2%] pr-[2%] mr-[20px]  sm:text-sm md:text-md lg:text-lg text-xs">Get started</Link>
+                    <Link to="/PropertiesFeed" className="rounded-full border-black border-2  hover:bg-slate-400 hover:bg-opacity-50 mr-[20px] p-2  sm:text-sm md:text-md lg:text-lg text-xs">Explore proeprities</Link>
                </div>
             </div>
         </div>
@@ -38,7 +40,7 @@ const Home = () => {
           <div className="text-white font-bold text-center pb-[2%] lg:text-[18px] md:text-[16px] sm:text-[14px]  text-[12px]">DARNAB count +1.5 million users and 20 000 property for sale and rent</div>
           <div className="text-white align-center text-center  lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px] ">DARNAB is a web platform that specializes in Real Estate announcement.</div>
           <div className="text-white text-center lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px]"> Our mission is to take the operation of the sale and purchase of proeprities simple ans easy </div>
-          <button className="bg-white rounded-full mx-auto w-[15%] mt-[3%] lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px] text-black lg:p-4 md:p-3 p-2 hover:bg-slate-400 hover:bg-opacity-100"><a href="/properties">Explore properties</a></button>
+          <Link to="/PropertiesFeed" className="w-[15%]"><button className="bg-white rounded-full mx-auto w-full mt-[3%] lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px] text-black lg:p-4 md:p-3 p-2 hover:bg-slate-400 hover:bg-opacity-100">Explore properties </button> </Link>
       
         </div>
 
@@ -68,7 +70,7 @@ const Home = () => {
                <div className="w-[25%] ml-[15%]">
                     <div className="lg:text-xl md:text-lg sm:text-md text-sm">Links</div>
                     <div className="lg:py-5 md:py-4 sm:py-3 py-2 hover:cursor-pointer hover:text-blue-800 lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px]" >Home</div>
-                    <div className="lg:py-5 md:py-4 sm:py-3 py-2 hover:cursor-pointer hover:text-blue-800 lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px]">About as</div>
+                    <div className="lg:py-5 md:py-4 sm:py-3 py-2 hover:cursor-pointer hover:text-blue-800 lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px]">About us</div>
                     <div className="lg:py-5 md:py-4 sm:py-3 py-2 hover:cursor-pointer hover:text-blue-800 lg:text-[16px] md:text-[14px] sm:text-[12px]  text-[10px]">FAQ</div>
                </div>
                <div className="w-[25%]">
