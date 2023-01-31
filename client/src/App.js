@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp"
 import NewListing from "./pages/NewListing"
 import Profile from "./pages/Profile"
 import Editprofile from "./pages/Editprofile";
+import NotFound from './pages/NotFound'
 import { Routes,Route } from "react-router-dom";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/Card/:cardId" element={<CardDetails />} />
       <Route path="/Profile" element={<Profile />} />
       <Route path="/EditProfile" element={<Editprofile />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     </>
 
