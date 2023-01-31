@@ -9,10 +9,17 @@ import lands from '../photos/lands.svg'
 import ssss from '../photos/ssss.svg'
 import { useState } from 'react';
 import Card from '../components/card';
-import { Link } from 'react-router-dom';
 
 
 const PropertiesFeed = () => {
+    const tableau = [{
+        id: 1 ,
+        type : "tiny", 
+        category: "vente" ,
+        surface : ""
+    }]
+
+
     const [filter,setFilter] =useState(false)
     const handlClick=()=>{
             if(filter)setFilter(false)
@@ -156,18 +163,20 @@ const PropertiesFeed = () => {
             
                 <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full border-2 opacity-75 focus:opacity-100 border-black">
                     <option hidden selected className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>State</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Gjjj</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>hhhh</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>kkkk</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Sell</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Exchange</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent</option>
+                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent for holidays</option>
                 </select>
             
-            
-                <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
+                <input type="text" placeholder='City' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-3 p-2 rounded-full hover:cursor-pointer'/>
+
+              { /*  <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
                     <option hidden selected>City</option>
                     <option >Gjjj</option>
                     <option>hhhh</option>
                     <option>kkkk</option>
-                </select>
+        </select> */}
             
             <div className='flex justify-start items-center'>
                 <h5 className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:pr-4 md:pr-3 sm:pr-2 pr-1 text-right'>Date range</h5>

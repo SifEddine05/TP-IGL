@@ -4,11 +4,11 @@ import Image from './Image';
 
 import { useEffect } from "react";
 
-function DragDrop(props) {
+function DragDrop({setImages ,images}) {
   const [alert,setAlert]=useState(false)
-  const [images, setImages] = useState([]);
   
   useEffect (()=>{
+    //console.log(images[0].src);
    let i = images.findIndex(e=> e.src.slice(5,10) !== "image") 
     if(i !==-1){
       setAlert(true)
@@ -23,6 +23,7 @@ function DragDrop(props) {
     setAlert(false)
   }
   const removeFile = (name) => {
+    console.log(images);
     // find the index of the item
     // remove the item from array
   

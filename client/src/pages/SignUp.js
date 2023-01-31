@@ -24,7 +24,7 @@ const SignUp = () => {
     const[agree , setAgree] =useState(false)
     const [err , setErr] = useState(false)
     const [message , setMessage]=useState('')
-    const navigate = useNavigate()
+    const [open , setOpen]=useState('modal')
 
     function isValidEmail(email) {
         return /\S+@\S+\.\S+/.test(email);
@@ -64,7 +64,7 @@ const SignUp = () => {
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify(LogoutObj) 
           })
-          .then((res)=>{navigate('/login')}) //Alert to tell him that you are registred and we will redirect it to login 
+          .then((res)=>{setOpen('modal-open absolute top-[30%] lef-[45%] right-[30%]')}) //Alert to tell him that you are registred and we will redirect it to login 
           .catch((err)=>{
               setMessage('Error message from the backend ') // we put the error message from the backend 
               setErr(true)
@@ -179,7 +179,7 @@ const SignUp = () => {
             <div className="self-start w-[8%]">
                 <img src={Exa} alt="exclude-above" className="w-[100%]"/>
             </div>
-            <div className="modal" id="my-modal-2">
+            <div className={open} id="my-modal-2">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg">You have been registered successfully !</h3>
                     <p className="py-4">you have been registred in our app now you can logged in !</p>
@@ -187,9 +187,13 @@ const SignUp = () => {
                     <Link to="/login" className="btn">Login</Link>
                     </div>
                 </div>
-            </div>
+            </div> 
     
         </div> );
 }
  
 export default SignUp;
+
+
+
+ 
