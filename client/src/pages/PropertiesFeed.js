@@ -13,10 +13,17 @@ import Card from '../components/card';
 
 const PropertiesFeed = () => {
     const tableau = [{
-        id: 1 ,
-        type : "tiny", 
-        category: "vente" ,
-        surface : ""
+        type: "house" , 
+        area : 100 , 
+        dimX : 10 , 
+        dimY : 20 ,
+        nbrRooms : 3 , 
+        price : 2000.00 , 
+        state : "sell" , 
+        city : "batna" , 
+        street :"ain yagout" , 
+        description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+        images : ""  // in base 64
     }]
 
 

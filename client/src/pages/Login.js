@@ -43,15 +43,20 @@ const Login = () => {
         }
         else{
             handleLogin() // we replace this by the fetch in the comment 
-           /* const loginobj = {
+            const loginobj = {
                 email : email ,
                 password : password 
             }
-            fetch('/login' , {method: 'POST' , 
+          /*  fetch('/login' , {method: 'POST' , 
                               headers : {"Content-Type" : "application/json"},
                               body : JSON.stringify(loginobj) 
                             })
-                            .then((res)=>{handleLogin()}) // we push aguments depanding of our backend (we must have the user name) and the token   // we need to change it to handleSubmit in login button 
+                            .then((res)=>{
+                                if(!res.ok) {throw Error }
+                                else{
+                                    handleLogin()  // we push aguments depanding of our backend (we must have the user name) and the token   // we need to change it to handleSubmit in login button 
+                                }
+                                })
                             .catch((err)=>{
                                 setMessage('Login Failed: Your email or password is incorrect')
                                 setErr(true)

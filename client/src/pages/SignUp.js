@@ -6,7 +6,6 @@ import eyeOpen from "../photos/eyeO.png"
 import google from "../photos/google.svg"
 import { useState } from "react"
 import { Link } from 'react-router-dom';
-import { useNavigate } from "react-router-dom"
 
 
 const SignUp = () => {
@@ -64,7 +63,13 @@ const SignUp = () => {
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify(LogoutObj) 
           })
-          .then((res)=>{setOpen('modal-open absolute top-[30%] lef-[45%] right-[30%]')}) //Alert to tell him that you are registred and we will redirect it to login 
+          .then((res)=>{
+            if(!res.ok) {throw Error }
+            else{
+                setOpen('modal-open absolute top-[30%] lef-[45%] right-[30%]')//Alert to tell him that you are registred and we will redirect it to login 
+
+            }
+        })
           .catch((err)=>{
               setMessage('Error message from the backend ') // we put the error message from the backend 
               setErr(true)

@@ -9,21 +9,61 @@ import bun from '../photos/bun.png'
 import farms from '../photos/farms.svg'
 import lands from '../photos/lands.svg'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NewListing = () => {
     
-    const [type,setType]=useState('')
+    const [type,setType]=useState('house')
     const [area , setArea] = useState(0)
     const [dimX , setDimX] =useState(0)
     const [dimY , setDimY] =useState(0)
     const [nbrRooms,setNbrRooms]=useState(0)
-    const [TypeOfProperty ,setTypeOfProperty ] = useState("sell")
     const [price , setPrice] = useState(0)
     const [state , setState] = useState("Vente")
     const [city , setCity] =useState("")
     const [street , setStreet] =useState("")
     const [description ,setDescription] = useState("")
     const [images, setImages] = useState([]);
+    const [err , setErr] = useState(false)
+    const [message , setMessage]=useState('')
+    const navigate = useNavigate()
+    const handlSubmit = ()=>{
+        setErr(false)
+        //console.log(type,area ,dimX,dimY, nbrRooms , price ,city , street , description , images ,state );
+        if(area===0 || dimX===0 || dimY===0 || nbrRooms===0 || price===0 || state==="" || city==="" || street==='' || description==='' || images.length===0)
+        {
+            setMessage('Please fill in all fields') 
+            setErr(true)
+        }else{
+            const Annonce ={
+                type: type , 
+                area : area , 
+                dimX : dimX , 
+                dimY : dimY ,
+                nbrRooms : nbrRooms , 
+                price : price , 
+                state : state , 
+                city : city , 
+                street :street , 
+                description : description , 
+                images :images 
+            }
+            fetch('/addAnnonce' , {method: 'POST' , 
+            headers : {"Content-Type" : "application/json"},
+            body : JSON.stringify(Annonce) 
+          })
+          .then((res)=>{
+              if(!res.ok) {throw Error }
+              else{
+                navigate('/PropertiesFeed')
+              }
+            })
+          .catch((err)=>{
+              setMessage('Error message from the backend ') // we put the error message from the backend 
+              setErr(true)
+          }) 
+        }
+    }
 
 
 
@@ -215,12 +255,12 @@ const NewListing = () => {
                 <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4   flex justify-between items-center w-[90%] mx-auto ">
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col ">State<br/>
                         <div className="w-full">
-                            <select value={state} onChange={(e)=>{setState(e.target.value)}} className="w-full md:p-3 p-2  px-[10%] bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
-                                <option hidden selected></option>
-                                <option >Sell</option>
-                                <option>Exchange</option>
-                                <option>Rent</option>
-                                <option>rent for holidays</option>
+                            <select value={state} onChange={(e)=>{setState(e.target.value);}} className="w-full md:p-3 p-2  px-[10%] bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
+                                <option hidden value="" selected></option>
+                                <option value="Sell">Sell</option>
+                                <option value="Exchange" >Exchange</option>
+                                <option value="Rent">Rent</option>
+                                <option value="RentHolidays" >Rent for holidays</option>
                             </select>
                         </div>                    
                     </label>
@@ -236,10 +276,14 @@ const NewListing = () => {
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[100%] flex justify-center flex-col  ">Description<br/>
                     <textarea value={description} onChange={(e)=>{setDescription(e.target.value)}} id="Description" name="Description" rows="8" cols="50" className=" lg:p-6 md:p-4 sm:p-2 p-1 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] mt-2 border-2 border-black rounded-lg"></textarea>                    </label>
                 </div>
+                {err && <div  className="w-[100%] mx-auto lg:pt-2 pt-1" >
+                    <p className="text-center font-bold lg:text-[18px] md:text-[16px] sm:text-[13px] text-[10px] text-red-600 ">{message}</p>
+                </div> }
                 <div className="flex justify-end  lg:pb-10 md:pb-8 sm:pb-6 pb-4">
                     <button className="md:p-3 p-2 border-2 lg:mr-6 md:mr-4 sm:mr-2 mr-1 border-black rounded-full text-center lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] shadow-md hover:bg-black hover:bg-opacity-20">Save draft</button>
-                    <button className="md:p-3 p-2 border-2 border-black bg-black rounded-full text-center text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]  shadow-md hover:bg-[#002E7C] lg:px-6 md:px-4 sm:px-2 px-1">Publish</button>
+                    <button className="md:p-3 p-2 border-2 border-black bg-black rounded-full text-center text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]  shadow-md hover:bg-[#002E7C] lg:px-6 md:px-4 sm:px-2 px-1" onClick={handlSubmit}>Publish</button>
                 </div>
+                
 
             </div>
         </div>
