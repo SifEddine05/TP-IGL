@@ -7,9 +7,10 @@ import kk from '../photos/watch.png'
 import Nav from '../components/nav'
 import Card from '../components/card';
 import { useState } from 'react'
+import {useAuth } from '../context/auth'
 
 const Profile = () => {
-  
+  const auth = useAuth() // it will contain the token 
     return ( 
        <div>
             <Nav num={false} /> 

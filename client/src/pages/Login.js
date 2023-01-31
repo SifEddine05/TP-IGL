@@ -6,11 +6,64 @@ import eyeOpen from "../photos/eyeO.png"
 import google from "../photos/google.svg"
 import { useState } from "react"
 import { Link } from 'react-router-dom';
-
+import { useAuth } from "../context/auth"
+import { useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 const Login = () => {
+    const location = useLocation()
+    const redirectPath = location.state?.path || '/PropertiesFeed' 
+    const auth=  useAuth()
+    const navigate = useNavigate()
+    const [user , setUser] = useState('ss') // it will contain the token here 
+    const handleLogin = ()=>{
+        auth.Login(user)
+        navigate(redirectPath, {replace : true})
+        console.log(redirectPath);
+
+    }
+    /*************Controle forms ****************** */
+    const [email , setEmail] = useState('')
+    const [password , setPassword] =useState('')
+    const [err , setErr] =useState(false)
+    const [message , setMessage] = useState('')
+    function isValidEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+      }
+    const handleSubmit = ()=>{
+        setErr(false)
+        if(email==='' || password==='') 
+        {
+            setMessage('please enter an email and a password ')
+            setErr(true)
+        }
+        else if (!isValidEmail(email)){
+            
+            setMessage('please enter a vaild email')
+            setErr(true)
+        }
+        else{
+            handleLogin() // we replace this by the fetch in the comment 
+           /* const loginobj = {
+                email : email ,
+                password : password 
+            }
+            fetch('/login' , {method: 'POST' , 
+                              headers : {"Content-Type" : "application/json"},
+                              body : JSON.stringify(loginobj) 
+                            })
+                            .then((res)=>{handleLogin()}) // we push aguments depanding of our backend (we must have the user name) and the token   // we need to change it to handleSubmit in login button 
+                            .catch((err)=>{
+                                setMessage('Login Failed: Your email or password is incorrect')
+                                setErr(true)
+                            })*/
+        }
+        
+    }
+    /************************************************** */
+
+
     const [show , setShow]=useState(false)
     const [type , setType]=useState("password")
-
     const handlClick= ()=>{
         if(show){
             setShow(false) 
@@ -34,12 +87,12 @@ const Login = () => {
             </div>
             <h3 className="lg:text-[28px] md:text-[22px] sm:text-[16px] text-[13px] font-medium text-center lg:py-5 md:py-4 sm:py-3 py-2"> Welcome back! </h3>
             <div className="flex justify-center lg:py-5 md:py-4 sm:py-3 py-2 w-full">
-                <input  type="email"className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Email address"  />
+                <input  type="email" value={email} minlength="5" onChange={(e)=>{setEmail(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Email address"  />
              </div>
 
              <div className="flex justify-center lg:py-5 md:py-4 sm:py-3 py-2 w-full">
                  <div className="w-[45%] relative">
-                    <input  type={type} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Password"  />
+                    <input  type={type} value={password}  minlength="5" onChange={(e)=>{setPassword(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Password"  />
                   {!show  && 
                     <div className="w-[10%] absolute top-3  right-4 hover:cursor-pointer" onClick={handlClick } >
                       <img src={eye} alt="close eye" />
@@ -58,12 +111,15 @@ const Login = () => {
                 </label>
                 <h3 className="py-2 lg:text-[14px] md:text-[12px]  sm:text-[10px]  text-[8px]  text-gray-600 leading-snug opacity-75 hover:text-[#177aeb]"><a href="/frgpass">Forgot password</a></h3> 
             </div>
-
-            <div className="w-[45%] mx-auto rounded-full  bg-[#FF5D02]  md:p-3 p-2 hover:text-[#fff] hover:cursor-pointer hover:bg-gray-600 ">
-                <h3 className="text-center lg:text-[18px] md:text-[15px] sm:text-[12px] text-[10px] font-bold">Sign in</h3>
+            <div className="flex justify-center items-center">
+                <button className="w-[45%] rounded-full  bg-[#FF5D02]  md:p-3 p-2 hover:text-[#fff] hover:cursor-pointer hover:bg-gray-600 " onClick={handleSubmit}>  
+                    <h3 className="text-center lg:text-[18px] md:text-[15px] sm:text-[12px] text-[10px] font-bold">Sign in</h3>
+                </button>
             </div>
-
-            <div className="w-[45%] mx-auto lg:py-5 md:py-4 sm:py-3 py-2">
+            {err && <div  className="w-[100%] mx-auto lg:pt-2 pt-1" >
+                <p className="text-center font-bold lg:text-[14px] md:text-[12px] sm:text-[9px] text-[7px] text-red-600 ">{message}</p>
+            </div> }
+            <div className="w-[45%] mx-auto py-2">
                 <p className="text-center">OR</p>
             </div>
 

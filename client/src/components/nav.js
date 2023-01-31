@@ -1,13 +1,23 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import logo from '../photos/Logo2.svg'
 import not from '../photos/notif.png'
 import sett from '../photos/sett.svg'
 import Noty from './Noty';
-
+import { useAuth } from '../context/auth';
+import { confirmAlert } from 'react-confirm-alert';
 
 const Nav = ({num}) => {
-   
+   const auth= useAuth ()
+   const navigate = useNavigate()
+   // const [confirm , setConfirm] = useState(false)
+   const handleLogout = ()=>{
+      // setConfirm(true)
+      // console.log("sifou");
+       auth.Logout() // we delete the token and we redirect 
+       navigate('/');
+
+    }
     return ( 
     <nav className='bg-[#FF5D02] lg:p-3  sm:p-2 p-1 flex justify-between items-center'>
         <div className='w-[10%]'>
@@ -21,8 +31,10 @@ const Nav = ({num}) => {
           {num &&  <Link to='/Profile' className="lg:text-[20px] md:text-[17px] sm:text-[14px] text-[11px] hover:text-white ">Profile</Link> }
            {!num  && <Link to='/Profile' className="lg:text-[20px] md:text-[17px] sm:text-[14px] text-[11px] hover:text-white font-bold">Profile</Link> }
 
-            <Link to='/Logout' className="lg:text-[20px] md:text-[17px] sm:text-[14px] text-[11px] hover:text-white">Logout</Link>
+            <button className="lg:text-[20px] md:text-[17px] sm:text-[14px] text-[11px] hover:text-white" onClick={handleLogout}>Logout</button>
         </div>
+      
+      
 
         <div className='w-[20%] flex justify-around items-center '>
             <Link  to="/EditProfile" className='w-[30%] hover:cursor-pointer'>
