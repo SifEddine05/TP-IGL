@@ -10,9 +10,14 @@ import farms from '../photos/farms.svg'
 import lands from '../photos/lands.svg'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
+const UPLOAD_URL = "https://api.cloudinary.com/v1_1/dc3fxvt26/image/upload";
 
 const NewListing = () => {
-    
+
+
+
+
     const [type,setType]=useState('house')
     const [area , setArea] = useState(0)
     const [dimX , setDimX] =useState(0)
@@ -26,8 +31,21 @@ const NewListing = () => {
     const [images, setImages] = useState([]);
     const [err , setErr] = useState(false)
     const [message , setMessage]=useState('')
+
     const navigate = useNavigate()
+
+
+    const uploadBase64Image = (base64Image) => {
+        const formData = new FormData();
+        formData.append('file', base64Image);
+        formData.append('upload_preset', 'mipff47j');
+      
+        return axios.post(UPLOAD_URL, formData)
+          .then(response => response.data);
+      };
+      
     const handlSubmit = ()=>{
+        
         setErr(false)
         //console.log(type,area ,dimX,dimY, nbrRooms , price ,city , street , description , images ,state );
         if(area===0 || dimX===0 || dimY===0 || nbrRooms===0 || price===0 || state==="" || city==="" || street==='' || description==='' || images.length===0)
@@ -35,6 +53,12 @@ const NewListing = () => {
             setMessage('Please fill in all fields') 
             setErr(true)
         }else{
+            Promise.all(images.map(image => uploadBase64Image(image.src)))
+        .then(results => {
+            const url =[];
+            results.map((elem)=>{
+                    url.push(elem.url)
+            })
             const Annonce ={
                 type: type , 
                 area : area , 
@@ -46,8 +70,8 @@ const NewListing = () => {
                 city : city , 
                 street :street , 
                 description : description , 
-                images :images 
-            }
+                images : url 
+            }            
             fetch('/addAnnonce' , {method: 'POST' , 
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify(Annonce) 
@@ -61,7 +85,11 @@ const NewListing = () => {
           .catch((err)=>{
               setMessage('Error message from the backend ') // we put the error message from the backend 
               setErr(true)
-          }) 
+          })
+
+          // Do something with the uploaded images
+        });
+             
         }
     }
 

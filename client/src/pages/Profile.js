@@ -8,19 +8,109 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 const Profile = () => {
-  const auth = useAuth() // it will contain the user details 
+    // "http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290127/vkchoybulqat4ffgid3x.png"
+    //"http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"
+  const auth = useAuth() // it will contain the current user details 
+    const [MyListing,setMyListing]=useState([ 
+        // this set Table will be replaced by the fetch below 
+        {   id:0,
+            type: "" , 
+            area : 0 , 
+            dimX : 0 , 
+            dimY : 0 ,
+            nbrRooms : 0 , 
+            price : 0 , 
+            state : "" , 
+            city : "" , 
+            street :"" , 
+            description : "" , 
+            images : [""]
+        },])
 
-  /*  fetch('/getMyListings')
-            .then(res => { retusetUser(auth.user)
-rn res.json })
-            .then (data => {
-                    SetMyListing({
-                           
+  useEffect(()=>{
+    setMyListing([  // this set Table will be replaced by the fetch below 
+        {   id:1,
+            type: "tiny" , 
+            area : 100 , 
+            dimX : 10 , 
+            dimY : 20 ,
+            nbrRooms : 3 , 
+            price : 2000.00 , 
+            state : "sell" , 
+            city : "batna" , 
+            street :"ain yagout" , 
+            description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+            images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+        },
+        {   id:2,
+            type: "house" , 
+            area : 100 , 
+            dimX : 10 , 
+            dimY : 20 ,
+            nbrRooms : 3 , 
+            price : 2000.00 , 
+            state : "sell" , 
+            city : "batna" , 
+            street :"ain yagout" , 
+            description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+            images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+        },
+        {   id:3,
+            type: "house" , 
+            area : 100 , 
+            dimX : 10 , 
+            dimY : 20 ,
+            nbrRooms : 3 , 
+            price : 2000.00 , 
+            state : "sell" , 
+            city : "batna" , 
+            street :"ain yagout" , 
+            description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+            images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+        },
+    {       id:4 ,
+            type: "lux" , 
+            area : 100 , 
+            dimX : 10 , 
+            dimY : 20 ,
+            nbrRooms : 3 , 
+            price : 2000.00 , 
+            state : "sell" , 
+            city : "batna" , 
+            street :"ain yagout" , 
+            description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+            images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+        },
+        {   id:5,
+            type: "lux" , 
+            area : 100 , 
+            dimX : 10 , 
+            dimY : 20 ,
+            nbrRooms : 3 , 
+            price : 2000.00 , 
+            state : "sell" , 
+            city : "batna" , 
+            street :"ain yagout" , 
+            description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+            images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+        }, 
+    ])// this set table will replaced by the fetch below 
    
-                    })
+     /* fetch('/getMyListings')
+            .then(res => {
+            if(!res.ok){
+                throw Error 
+            }else{ return res.json}
+         })
+            .then (data => {
+                    setMyListing(data)
              } ) 
-            .catch(err => {} )*/
-   //}, []);*/
+            .catch(err => {} )
+   }, []);*/
+
+
+  },[])
+  
     return ( 
        <div>
             <Nav num={false} /> 
@@ -33,7 +123,7 @@ rn res.json })
                 <div className="w-[50%] flex justify-around">
                     <div className="flex flex-col justify-center items-center">
                         <div className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">My Listings</div>
-                        <div className=" lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] font-bold">2</div>
+                        <div className=" lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] font-bold">{MyListing.length}</div>
                     </div>
                     <div  className="flex flex-col justify-center items-center">
                          <div className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Bought Properties</div>
@@ -50,10 +140,11 @@ rn res.json })
                 <div className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] ml-[1%] mt-[0.25%]">My listings</div>
             </div>
             <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-[100%]'>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+               
+                {MyListing.map((e)=>{
+                    return(<Card annonce={e} user={auth.user} /> )
+                })}
+                        
             </div>
 
 

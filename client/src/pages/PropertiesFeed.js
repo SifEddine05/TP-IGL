@@ -9,22 +9,231 @@ import lands from '../photos/lands.svg'
 import ssss from '../photos/ssss.svg'
 import { useState } from 'react';
 import Card from '../components/card';
+import { useEffect } from 'react';
 
 
 const PropertiesFeed = () => {
-    const tableau = [{
-        type: "house" , 
-        area : 100 , 
-        dimX : 10 , 
-        dimY : 20 ,
-        nbrRooms : 3 , 
-        price : 2000.00 , 
-        state : "sell" , 
-        city : "batna" , 
-        street :"ain yagout" , 
-        description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-        images : ""  // in base 64
-    }]
+    const [tableau,setTableau]=useState([])
+
+
+
+    useEffect(()=>{
+
+
+                setTableau([{  // this set Table will be replaced by the fetch below 
+                    id:1,
+                    type: "tiny" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:2,
+                    type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:3,
+                    type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+            {       id:4,
+                    type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:5,
+                    type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                }, 
+                {  // this set Table will be replaced by the fetch below 
+                    id:1,
+                    type: "tiny" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:2,
+                    type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:3,
+                    type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+            {       id:4,
+                    type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:5,
+                    type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {  // this set Table will be replaced by the fetch below 
+                    id:1,
+                    type: "tiny" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:2,
+                    type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:3,
+                    type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+            {       id:4,
+                    type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+                {   id:5,
+                    type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                    images : [""]
+                },
+            ])// this set table will replaced by the fetch below 
+
+    /*fetch('/getAllAnnonces')
+    .then(res => {
+        if(!res.ok){
+            throw Error 
+        }else{ return res.json}
+        })
+        .then (data => {
+                setTableau(data)
+        }) 
+            .catch(err => {} )
+   }, []);*/
+
+    },[])
+     
 
 
     const [filter,setFilter] =useState(false)
@@ -200,19 +409,10 @@ const PropertiesFeed = () => {
             <button className='rounded-full lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1 hover:bg-slate-600 hover:text-white'>filter</button>
         </div>}
         <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-[90%]'>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-        
+         
+         {tableau.map((e)=>{
+             /// it must review the daisy ui  how it work 
+         })}
            
         </div>
         <div className="flex justify-center w-full py-2 mb-2 gap-2">
