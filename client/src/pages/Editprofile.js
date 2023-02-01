@@ -95,6 +95,9 @@ const Editprofile = () => {
                         <input value={newPassword} onChange={(e)=>setNewPassword(e.target.value)} type="password"  id="newpassword" name="newpassword" className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[100%]  p-2 px-4 rounded-full border-2 border-black"/>
                     </div>
                 </div>
+                {err && <div  className="w-[100%] mx-auto lg:pt-2 pt-1" >
+                    <p className="text-center font-bold lg:text-[18px] md:text-[16px] sm:text-[13px] text-[10px] text-red-600 ">{message}</p>
+                </div> }
                 <div className=" md:mt-5 mt-4   lg:mb-5 md:mb-4 sm:mb-3 mb-2  md:mr-3 mr-2  flex justify-end">
                     <button className="text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] bg-black rounded-full p-3 shadow-sm font-bold hover:bg-[#002E7C]" onClick={handleSubmit}>Save Changes</button>
                 </div>

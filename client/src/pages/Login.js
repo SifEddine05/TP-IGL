@@ -14,11 +14,12 @@ const Login = () => {
     const redirectPath = location.state?.path || '/PropertiesFeed' 
     const auth=  useAuth()
     const navigate = useNavigate()
-    const [user , setUser] = useState('ss') // it will contain the token here 
-    const handleLogin = ()=>{
-        auth.Login(user)
+   
+
+
+    const handleLogin = (token)=>{
+        auth.Login(token)
         navigate(redirectPath, {replace : true})
-        console.log(redirectPath);
 
     }
     /*************Controle forms ****************** */
@@ -42,7 +43,9 @@ const Login = () => {
             setErr(true)
         }
         else{
-            handleLogin() // we replace this by the fetch in the comment 
+            const token = "ddfsdgdfgsfg115" 
+            handleLogin(token)
+            // this handleLogin and token="ddfsdgdfgsfg115" will be replaced by the fetch  below 
             const loginobj = {
                 email : email ,
                 password : password 
@@ -54,7 +57,8 @@ const Login = () => {
                             .then((res)=>{
                                 if(!res.ok) {throw Error }
                                 else{
-                                    handleLogin()  // we push aguments depanding of our backend (we must have the user name) and the token   // we need to change it to handleSubmit in login button 
+                                    const token = res.token 
+                                    handleLogin(token)  
                                 }
                                 })
                             .catch((err)=>{
