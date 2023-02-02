@@ -12,8 +12,8 @@ const Card = ({annonce}) => {
   // sitll the image to put it in the place of image annonce.images[0]  
     const link = "/Card/"+annonce.id
     return ( 
-    <Link to={link} className="lg:w-[18%] w-[20%] lg:mx-6 md:mx-4 mx-2">
-    <div className="rounded-xl w-full relative shadow-md lg:my-8 md:my-6 sm:my-4 my-2  lg:mx-6 md:mx-4 mx-2 ">
+    <Link to={link} className="lg:w-[100%] w-[100%] lg:mx-6 md:mx-4 mx-2">
+    <div className="rounded-xl w-full relative shadow-md lg:mt-8 md:mt-6 sm:mt-4 mt-2  lg:mx-6 md:mx-4 mx-2 ">
             <img src={lov} alt="lov"  className="absolute top-4 right-3 w-[12%] hover:cursor-pointer"/>
             <img src={annonce.images[0]} alt="pht" className="w-full" />
             <div className=" p-1 flex justify-between">

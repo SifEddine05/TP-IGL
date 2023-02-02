@@ -11,7 +11,6 @@ import clear from '../photos/clearfilter.png'
 import { useState } from 'react';
 import Card from '../components/card';
 import { useEffect } from 'react';
-import { useAuth } from "../context/auth"
 
 
 const PropertiesFeed = () => {
@@ -793,7 +792,11 @@ const PropertiesFeed = () => {
                 
            return ( <div id={"item"+elem} className="carousel-item lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-full">
                {tableau.slice((elem-1)*12,(elem-1)*12+12).map((e)=>{
-                return(<Card annonce={e}  />)  // we must add key={e.id}
+                return(
+                <div className='w-[20%] lg:w-[18%] flex flex-warp'>
+                    <Card annonce={e}  />
+                </div>
+                )  // we must add key={e.id}
             })  }
            </div> )
          }) }
