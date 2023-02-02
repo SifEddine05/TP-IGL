@@ -7,6 +7,7 @@ import bun from '../photos/bun.png'
 import farms from '../photos/farms.svg'
 import lands from '../photos/lands.svg'
 import ssss from '../photos/ssss.svg'
+import clear from '../photos/clearfilter.png'
 import { useState } from 'react';
 import Card from '../components/card';
 import { useEffect } from 'react';
@@ -15,7 +16,9 @@ import { useAuth } from "../context/auth"
 
 const PropertiesFeed = () => {
     const [tableau,setTableau]=useState([])
+    const [saveTab,setSaveTab]=useState([])
     const [pages,setPages] = useState([0])
+    
     useEffect(()=>{
 
 
@@ -30,7 +33,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -43,7 +46,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -56,7 +59,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -69,7 +72,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -82,7 +85,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 }, 
@@ -96,7 +99,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -109,7 +112,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -122,7 +125,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -135,7 +138,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -148,7 +151,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -162,7 +165,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -175,7 +178,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -188,7 +191,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -201,7 +204,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -214,7 +217,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },   
@@ -228,7 +231,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -241,7 +244,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -254,7 +257,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -267,7 +270,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -280,7 +283,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 }, 
@@ -294,7 +297,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -307,7 +310,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -320,7 +323,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -333,7 +336,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2015-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -346,7 +349,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -360,7 +363,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2017-10-21" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -373,7 +376,7 @@ const PropertiesFeed = () => {
                     price : 2000.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2014-10-10" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -383,10 +386,10 @@ const PropertiesFeed = () => {
                     dimX : 10 , 
                     dimY : 20 ,
                     nbrRooms : 3 , 
-                    price : 2000.00 , 
-                    state : "sell" , 
+                    price : 2500.00 , 
+                    state : "rent" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2022-10-22" , street : "ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -396,10 +399,11 @@ const PropertiesFeed = () => {
                     dimX : 10 , 
                     dimY : 20 ,
                     nbrRooms : 3 , 
-                    price : 2000.00 , 
+                    price : 1500.00 , 
                     state : "sell" , 
                     city : "batna" , 
-                    street :"ain yagout" , 
+                    createdAt : "2020-10-22" , street : "ain yagout" , 
+
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -409,10 +413,10 @@ const PropertiesFeed = () => {
                     dimX : 10 , 
                     dimY : 20 ,
                     nbrRooms : 3 , 
-                    price : 2000.00 , 
+                    price : 1000.00 , 
                     state : "sell" , 
                     city : "batnattt" , 
-                    street :"ain yagouttttt" , 
+                    createdAt : "2020-10-21" , street : "ain yagouttttt" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                      images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
@@ -420,6 +424,7 @@ const PropertiesFeed = () => {
 
 
             setTableau(table)
+            setSaveTab(table)
             const pages = [1]
             let i = 1
 
@@ -432,6 +437,7 @@ const PropertiesFeed = () => {
                 }
             }
             setPages(pages)
+
     /*fetch('/getAllAnnonces')
     .then(res => {
         if(!res.ok){
@@ -440,6 +446,7 @@ const PropertiesFeed = () => {
         })
         .then (data => {
             setTableau(data)
+            setSaveTab(data)
             const pages = [1]
             let i = 1
 
@@ -460,6 +467,111 @@ const PropertiesFeed = () => {
      
 
 
+
+
+    const [state , setState]= useState('')
+    const [street,setStreet]=useState('')
+    const [city , setCity]=useState('')
+    const [dateinit,setDateinit] = useState('')
+    const [datefin,setDatefin] = useState('')
+    const [priceMin, setPriceMin]=useState(0)
+    const [priceMax,setPriceMax]=useState(0)
+
+    const handlCancel =()=>{
+        setTableau(saveTab)
+        setState('')
+        setStreet('')
+        setDateinit('')
+        setDatefin('')
+        setPriceMin(0)
+        setPriceMax(0)
+        setCity('')
+        setStyle1("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+        setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+        setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+        setStyle4("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+        setStyle5("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+        setStyle6("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+        setStyle7("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+
+    }
+
+    const handleFilter=()=>{
+        console.log(state,city,street,dateinit,datefin,priceMin,priceMax);
+        let Tab = saveTab ;
+        if(state!=='' )
+        {
+            if(state==='all')
+            {
+                Tab=saveTab 
+            }
+            else{
+                function filter(elem) {
+                    return (elem.state===state)
+                }
+                Tab = saveTab.filter(filter)
+            }
+           
+        }
+        if(city!=='')
+        {
+            function filter(elem) {
+                return (elem.city===city)
+            }
+            Tab= Tab.filter(filter)
+        }
+        if(street!=='')
+        {
+            function filter(elem) {
+                return (elem.street===street)
+            }
+            Tab= Tab.filter(filter)
+        }
+        if(dateinit !=='')
+        {
+            function filter(elem) {
+                return (elem.createdAt>=dateinit)
+            }
+            Tab= Tab.filter(filter)
+        }
+        if(datefin !=='')
+        {
+            function filter(elem) {
+                return (elem.createdAt<=datefin)
+            }
+            Tab= Tab.filter(filter)
+        }
+        if(priceMin !==0 && priceMin !== '')
+        {
+            console.log("Min" , priceMin)
+            function filter(elem) {
+                return (elem.price>=priceMin)
+            }
+            Tab= Tab.filter(filter)
+        }
+        if(priceMax !==0 && priceMax !== '')
+        {
+            console.log("Max" , priceMax)
+
+            function filter(elem) {
+                return (elem.price<=priceMax)
+            }
+            Tab= Tab.filter(filter)
+        }
+       
+        
+            
+            setTableau(Tab)
+            console.log(tableau);
+
+        }
+
+
+
+
+
+
+
     const [filter,setFilter] =useState(false)
     const handlClick=()=>{
             if(filter)setFilter(false)
@@ -472,9 +584,17 @@ const PropertiesFeed = () => {
     const [style5,setStyle5]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
     const [style6,setStyle6]=useState("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
     const [style7,setStyle7]=useState("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
+    
+    
     const chooseType =(e)=>{
         if(e.target.value==="house")
         {
+            function checkType(elem) {
+                return (elem.type==="house")
+              }
+           
+           setTableau(saveTab.filter(checkType))
+           //console.log(Tab) 
             setStyle1("bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center  hover:cursor-pointer")
             setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
@@ -486,6 +606,11 @@ const PropertiesFeed = () => {
         }
         else if (e.target.value==="tiny")
         {
+            function checkType(elem) {
+                return (elem.type==="tiny")
+              }
+           
+           setTableau(saveTab.filter(checkType))
             setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle2(" bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center  hover:cursor-pointer")
             setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
@@ -497,6 +622,11 @@ const PropertiesFeed = () => {
         }
         else if (e.target.value==="lux")
         {
+            function checkType(elem) {
+                return (elem.type==="lux")
+              }
+           
+           setTableau(saveTab.filter(checkType))
             setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle2(" md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle3(" bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center  hover:cursor-pointer")
@@ -508,6 +638,11 @@ const PropertiesFeed = () => {
         }
         else if (e.target.value==="appartements")
         {
+            function checkType(elem) {
+                return (elem.type==="appartements")
+              }
+           
+           setTableau(saveTab.filter(checkType))
             setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
@@ -519,6 +654,11 @@ const PropertiesFeed = () => {
         }
         else if (e.target.value==="bun")
         {
+            function checkType(elem) {
+                return (elem.type==="bun")
+              }
+           
+           setTableau(saveTab.filter(checkType))
             setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
@@ -530,6 +670,11 @@ const PropertiesFeed = () => {
         }
         else if (e.target.value==="farms")
         {
+            function checkType(elem) {
+                return (elem.type==="farms")
+              }
+           
+           setTableau(saveTab.filter(checkType))
             setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
@@ -541,6 +686,11 @@ const PropertiesFeed = () => {
         }
         else if (e.target.value==="lands")
         {
+            function checkType(elem) {
+                return (elem.type==="lands")
+              }
+           
+           setTableau(saveTab.filter(checkType))
             setStyle1("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle2("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
             setStyle3("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer")
@@ -594,6 +744,10 @@ const PropertiesFeed = () => {
                 <button className='md:p-2 p-1 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer lg:w-[7%] w-[10%]'><img src={farms} alt="house" className='w-[100%]' /></button>
                 <button className='md:p-2 p-1 rounded-3xl hover:bg-black hover:bg-opacity-5 hover:cursor-pointer lg:w-[7%] w-[10%]'><img src={lands} alt="house" className='w-[100%]' /></button>
             </div> */}
+
+            <div className='w-[10%] lg:mr-10 md:mr-8 sm:mr-6 mr-4 '>
+                <button onClick={handlCancel} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 '> <img src={clear} alt='filter' className='w-[30%] '/>Clearfilter</button>
+            </div>
             <div className='w-[10%] lg:mr-10 md:mr-8 sm:mr-6 mr-4 '>
                 <button onClick={handlClick} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1'> <img src={ssss} alt='filter' className='w-[22%]  mr-2'/>Filter</button>
             </div>
@@ -601,15 +755,16 @@ const PropertiesFeed = () => {
 
      {filter &&   <div className='flex justify-around items-center md:pt-2 pt-1 border-b-2 md:p-2 p-1 w-[100%]'>
             
-                <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full border-2 opacity-75 focus:opacity-100 border-black">
-                    <option hidden selected className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>State</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Sell</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Exchange</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent</option>
-                    <option className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent for holidays</option>
+                <select value={state} onChange={(e)=>{setState(e.target.value)}} className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full border-2 opacity-75 focus:opacity-100 border-black">
+                    <option value="all"  selected className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>All</option>
+                    <option value="sell" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Sell</option>
+                    <option value="exchange"  className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Exchange</option>
+                    <option value="rent" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent</option>
+                    <option value="rent for holidays" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent for holidays</option>
                 </select>
             
-                <input type="text" placeholder='City' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-3 p-2 rounded-full hover:cursor-pointer'/>
+                <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}placeholder='City' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-3 p-2 rounded-full hover:cursor-pointer'/>
+                <input type="text" value={street} onChange={(e)=>{setStreet(e.target.value)}}placeholder='Street' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-3 p-2 rounded-full hover:cursor-pointer'/>
 
               { /*  <select className=" max-w-xs lg:p-4 md:p-3 sm:p-2 p-1 bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
                     <option hidden selected>City</option>
@@ -620,17 +775,17 @@ const PropertiesFeed = () => {
             
             <div className='flex justify-start items-center'>
                 <h5 className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:pr-4 md:pr-3 sm:pr-2 pr-1 text-right'>Date range</h5>
-                <input type="date" className='border-2 lg:mr-4 md:mr-3 sm:mr-2 mr-1  border-black md:p-2 p-1 lg:text-[14px] md:text-[12px] sm:text-[10px] text-[8px] rounded-full hover:cursor-pointer'/>
-                <input type="date" className='border-2 border-black md:p-2 p-1 rounded-full hover:cursor-pointer lg:text-[14px] md:text-[12px] sm:text-[10px] text-[8px]'/>
+                <input value={dateinit} onChange={(e)=>{setDateinit(e.target.value)}} type="date" className='border-2 lg:mr-4 md:mr-3 sm:mr-2 mr-1  border-black md:p-2 p-1 lg:text-[14px] md:text-[12px] sm:text-[10px] text-[8px] rounded-full hover:cursor-pointer'/>
+                <input value={datefin} onChange={(e)=>{setDatefin(e.target.value)}} type="date" className='border-2 border-black md:p-2 p-1 rounded-full hover:cursor-pointer lg:text-[14px] md:text-[12px] sm:text-[10px] text-[8px]'/>
             </div>
 
             <div className='flex justify-start items-center'>
                 <h5 className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:pr-4 md;pr-3 sm:pr-2 pr-1 text-right'>Budget range</h5>
-                <input type="number" placeholder='Min' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-2 p-1 rounded-full hover:cursor-pointer'/>
-                <input type="number" placeholder='Max' className='border-2  lg:w-[17%] w-[33%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] border-black md:p-2 p-1 rounded-full hover:cursor-pointer'/>
+                <input value={priceMin} onChange={(e)=>{setPriceMin(e.target.value)}} type="number" placeholder='Min' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-2 p-1 rounded-full hover:cursor-pointer'/>
+                <input value={priceMax} onChange={(e)=>{setPriceMax(e.target.value)}} type="number" placeholder='Max' className='border-2  lg:w-[17%] w-[33%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] border-black md:p-2 p-1 rounded-full hover:cursor-pointer'/>
             </div>
             
-            <button className='rounded-full lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1 hover:bg-slate-600 hover:text-white'>filter</button>
+            <button className='rounded-full lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1 hover:bg-slate-600 hover:text-white' onClick={handleFilter}>filter</button>
         </div>}
         <div className='carousel '>
          
@@ -638,7 +793,7 @@ const PropertiesFeed = () => {
                 
            return ( <div id={"item"+elem} className="carousel-item lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-full">
                {tableau.slice((elem-1)*12,(elem-1)*12+12).map((e)=>{
-                return(<Card annonce={e} key={e.id} />) 
+                return(<Card annonce={e}  />)  // we must add key={e.id}
             })  }
            </div> )
          }) }
