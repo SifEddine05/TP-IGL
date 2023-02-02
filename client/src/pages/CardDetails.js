@@ -110,10 +110,10 @@ const CardDetails = () => {
                          <div className="mt-[5%] lg:text-xl md:text-lg sm:text-md text-xs">Location</div>
                          <div className="mt-[3%] lg:text-xl md:text-lg sm:text-md text-xs">{Card.street} , {Card.city} </div>
                          <div className="w-full flex mt-[5%] justify-around mx-auto">
-                              <div className="w-full ml-[5%] "><button className="flex  md:px-6 px-3  items-center rounded-full md:p-3 p-2  hover:bg-black hover:bg-opacity-75 bg-black  " >
+                              <a  href="#my-modal-2" className="w-full ml-[5%] "><button className="flex  md:px-6 px-3  items-center rounded-full md:p-3 p-2  hover:bg-black hover:bg-opacity-75 bg-black  " >
                                    <div className="flex"><img src={aa} alt='aa'/></div>
                                    <div className="w-full pl-[2%] text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Call owner</div>
-                                   </button></div>
+                                   </button></a>
                               <div className="w-full  "><button className=" flex items-center  md:p-3 p-2  md:px-5 px-3    rounded-full border-2 border-black hover:bg-black hover:bg-opacity-10">
                                    <div><img src={tt} alt='tt'/></div>
                                    <div className=" w-full pl-[2%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Message owner</div>
@@ -121,7 +121,17 @@ const CardDetails = () => {
                          </div>
                     </div>
                </div>
-           </div> 
+           </div>
+
+          <div className="modal" id="my-modal-2">
+               <div className="modal-box">
+               <h3 className="font-bold text-lg">Would you Call the owner ! </h3>
+               <p className="py-4">This is his phone number : 0558456920 </p>
+               <div className="modal-action">
+               <a href="#" className="btn"> OK! </a>    
+          </div>
+  </div>
+</div> 
         </div>
      );
 }

@@ -12,8 +12,6 @@ import NotFound from './pages/NotFound'
 import { Routes,Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/auth";
 import { RequireAuth } from "./components/RequireAuth";
-import { useState } from 'react'
-import { useEffect } from 'react'
 function App() {
   
   
@@ -28,8 +26,6 @@ function App() {
       <Route path="/Card/:cardId" element={<RequireAuth><CardDetails /></RequireAuth>} />
       <Route path="/Profile" element={<RequireAuth><Profile /></RequireAuth>} />
       <Route path="/EditProfile" element={<RequireAuth><Editprofile /></RequireAuth>} />
-     {localStorage.getItem('token') && <Route path="/Login" element={<Navigate to="/PropertiesFeed"  />} /> }
-     {localStorage.getItem('token') && <Route path="/SignUp" element={<Navigate to="/PropertiesFeed"  />} />}
     <Route path="*" element={<NotFound />} /> 
     </Routes>
     </AuthProvider>
