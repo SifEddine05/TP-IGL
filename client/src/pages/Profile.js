@@ -1,6 +1,6 @@
 import ii from '../photos/profile.jpg'
 import mm from '../photos/Mask.png'
-import kk from '../photos/watch.png'
+import del from '../photos/delete.png'
 import Nav from '../components/nav'
 import Card from '../components/card';
 import {useAuth } from '../context/auth'
@@ -110,6 +110,39 @@ const Profile = () => {
 
 
   },[])
+  const [err , setErr] = useState(false)
+  const [message , setMessage]=useState('')
+  const deleteAnonce = (id)=>{
+      setErr(false)
+    let Tab = MyListing ; 
+    function filter(elem) {
+        return (elem.id!==id)
+    }
+    Tab= Tab.filter(filter)
+    setMyListing(Tab)
+
+    // this instruction will be replaced by the fetch below
+
+
+   /*fetch('/deletAnnonce' , {method: 'Delete' , 
+    headers : {"Content-Type" : "application/json"},
+    body : JSON.stringify(id) 
+  })
+  .then((res)=>{
+      if(!res.ok) {throw Error }
+      else{
+          function filter(elem) {
+                     return (elem.id!==id)
+            }
+            Tab= Tab.filter(filter)
+            setMyListing(Tab)
+      }
+    })
+  .catch((err)=>{
+      setMessage('Error message from the backend ') // we put the error message from the backend 
+      setErr(true)
+  })*/
+  }
   
     return ( 
        <div>
@@ -140,9 +173,22 @@ const Profile = () => {
                 <div className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] ml-[1%] mt-[0.25%]">My listings</div>
             </div>
             <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-[100%]'>
-               
+            {err && <div  className="w-[100%] mx-auto lg:pt-2 pt-1" >
+                    <p className="text-center font-bold lg:text-[18px] md:text-[16px] sm:text-[13px] text-[10px] text-red-600 ">{message}</p>
+                </div> }
+                
                 {MyListing.map((e)=>{
-                    return(<Card annonce={e} user={auth.user} /> )
+                    return( 
+                   // <div className="flex flex-col justify-center items-center w-full">
+                   <div className="flex flex-col justify-center items-center w-[20%] lg:w-[18%]" >
+                       <Card annonce={e} className='w-full'/>
+                        <button  onClick={()=>{deleteAnonce(e.id)}} className=" group flex flex-col justify-center items-center w-[50%] hover:bg-[#000] hover:bg-opacity-20  rounded-full p-2 border-2 " > 
+                            <h4 className='text-red-600 hidden group-hover:block'> Delete Annonce </h4>
+                            <img src={del} alt="delete" className="w-[20%]"/>
+                       </button>
+                   </div>
+                        
+               /* </div>*/ )
                 })}
                         
             </div>
@@ -158,19 +204,7 @@ const Profile = () => {
                 <Card/>
                 
     </div>  */}
-                  
             
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
        </div>
