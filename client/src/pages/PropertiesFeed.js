@@ -10,19 +10,19 @@ import ssss from '../photos/ssss.svg'
 import { useState } from 'react';
 import Card from '../components/card';
 import { useEffect } from 'react';
+import { useAuth } from "../context/auth"
 
 
 const PropertiesFeed = () => {
     const [tableau,setTableau]=useState([])
-
-
-
+    const [pages,setPages] = useState([0])
     useEffect(()=>{
 
 
-                setTableau([{  // this set Table will be replaced by the fetch below 
+               const table = [
+                {  // this set Table will be replaced by the fetch below 
                     id:1,
-                    type: "tiny" , 
+                    userName:"sifou",  type: "tiny" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -32,10 +32,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:2,
-                    type: "house" , 
+                    userName:"sifou", type: "house" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -45,10 +45,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:3,
-                    type: "house" , 
+                    userName:"sifou", type: "house" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -58,10 +58,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
             {       id:4,
-                    type: "lux" , 
+                    userName:"sifou", type: "lux" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -71,10 +71,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:5,
-                    type: "lux" , 
+                    userName:"sifou", type: "lux" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -84,11 +84,11 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 }, 
                 {  // this set Table will be replaced by the fetch below 
                     id:1,
-                    type: "tiny" , 
+                    userName:"sifou", type: "tiny" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -98,10 +98,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:2,
-                    type: "house" , 
+                    userName:"sifou", type: "house" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -111,10 +111,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:3,
-                    type: "house" , 
+                    userName:"sifou", type: "house" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -124,10 +124,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
             {       id:4,
-                    type: "lux" , 
+                    userName:"sifou", type: "lux" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -137,10 +137,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:5,
-                    type: "lux" , 
+                    userName:"sifou", type: "lux" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -150,11 +150,11 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {  // this set Table will be replaced by the fetch below 
                     id:1,
-                    type: "tiny" , 
+                    userName:"sifou", type: "tiny" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -164,10 +164,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:2,
-                    type: "house" , 
+                    userName:"sifou", type: "house" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -177,10 +177,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:3,
-                    type: "house" , 
+                    userName:"sifou", type: "house" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -190,10 +190,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
             {       id:4,
-                    type: "lux" , 
+                    userName:"sifou", type: "lux" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -203,10 +203,10 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
                 {   id:5,
-                    type: "lux" , 
+                    userName:"sifou", type: "lux2222" , 
                     area : 100 , 
                     dimX : 10 , 
                     dimY : 20 ,
@@ -216,10 +216,222 @@ const PropertiesFeed = () => {
                     city : "batna" , 
                     street :"ain yagout" , 
                     description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
-                    images : [""]
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },   
+                {  // this set Table will be replaced by the fetch below 
+                    id:1,
+                    userName:"sifou", type: "tiny" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
                 },
-            ])// this set table will replaced by the fetch below 
+                {   id:2,
+                    userName:"sifou", type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:3,
+                    userName:"sifou", type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+            {       id:4,
+                    userName:"sifou", type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:5,
+                    userName:"sifou", type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                }, 
+                {  // this set Table will be replaced by the fetch below 
+                    id:1,
+                    userName:"sifou", type: "tiny" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:2,
+                    userName:"sifou", type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:3,
+                    userName:"sifou", type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+            {       id:4,
+                    userName:"sifou", type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:5,
+                    userName:"sifou", type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {  // this set Table will be replaced by the fetch below 
+                    id:1,
+                    userName:"sifou", type: "tiny" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:2,
+                    userName:"sifou", type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:3,
+                    userName:"sifou", type: "house" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+            {       id:4,
+                    userName:"sifou", type: "lux" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batna" , 
+                    street :"ain yagout" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+                {   id:5,
+                    userName:"sifoutt", type: "lux2222" , 
+                    area : 100 , 
+                    dimX : 10 , 
+                    dimY : 20 ,
+                    nbrRooms : 3 , 
+                    price : 2000.00 , 
+                    state : "sell" , 
+                    city : "batnattt" , 
+                    street :"ain yagouttttt" , 
+                    description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
+                     images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
+                },
+            ]// this set table will replaced by the fetch below 
 
+
+            setTableau(table)
+            const pages = [1]
+            let i = 1
+
+            for (let index = 1; index <= table.length; index++) {
+
+                if((index%12) ===0)
+                {
+                    pages[i]=i+1
+                    i++
+                }
+            }
+            setPages(pages)
     /*fetch('/getAllAnnonces')
     .then(res => {
         if(!res.ok){
@@ -227,7 +439,19 @@ const PropertiesFeed = () => {
         }else{ return res.json}
         })
         .then (data => {
-                setTableau(data)
+            setTableau(data)
+            const pages = [1]
+            let i = 1
+
+            for (let index = 1; index <= data.length; index++) {
+
+                if((index%12) ===0)
+                {
+                    pages[i]=i+1
+                    i++
+                }
+            }
+            setPages(pages)
         }) 
             .catch(err => {} )
    }, []);*/
@@ -241,7 +465,7 @@ const PropertiesFeed = () => {
             if(filter)setFilter(false)
             else setFilter(true)
     }
-    const [style1,setStyle1]=useState("bg-[#FF5D02] md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px]  flex justify-center items-center  hover:cursor-pointer") 
+    const [style1,setStyle1]=useState("md:w-[10%] w-[14%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
     const [style2,setStyle2]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
     const [style3,setStyle3]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
     const [style4,setStyle4]=useState("md:w-[11%] w-[15%]  rounded-2xl border-2  p-2 md:px-4 px-2 border-black lg:h-[100px] md:h-[80px] sm:h-[60px] h-[40px] flex justify-center items-center hover:bg-black hover:bg-opacity-20 hover:cursor-pointer") 
@@ -408,18 +632,27 @@ const PropertiesFeed = () => {
             
             <button className='rounded-full lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1 hover:bg-slate-600 hover:text-white'>filter</button>
         </div>}
-        <div className='lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-[90%]'>
+        <div className='carousel '>
          
-         {tableau.map((e)=>{
-             /// it must review the daisy ui  how it work 
-         })}
+         { pages.map((elem)=>{
+                
+           return ( <div id={"item"+elem} className="carousel-item lg:mt-4 md:mt-3 sm:mt-2 mt-1 mx-auto flex justify-around flex-wrap items-center w-full">
+               {tableau.slice((elem-1)*12,(elem-1)*12+12).map((e)=>{
+                return(<Card annonce={e} key={e.id} />) 
+            })  }
+           </div> )
+         }) }
            
         </div>
+
+       
         <div className="flex justify-center w-full py-2 mb-2 gap-2">
-            <a href="#item1" className="btn btn-xs rounded-full mx-2 ">1</a> 
-            <a href="#item2" className="btn btn-xs rounded-full mx-2 ">2</a> 
-            <a href="#item3" className="btn btn-xs rounded-full mx-2 ">3</a> 
-            <a href="#item4" className="btn btn-xs rounded-full mx-2 ">4</a>
+        {
+            pages.map((elem)=>{
+                return( <a href={"#item"+elem}  className="btn btn-xs rounded-full mx-2 ">{elem}</a> )
+
+            })
+        }
         </div>
        
     </div> );

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from "react"
 
 
-const Card = ({annonce,user}) => {
+const Card = ({annonce}) => {
 
   // sitll the image to put it in the place of image annonce.images[0]  
     const link = "/Card/"+annonce.id
@@ -19,7 +19,7 @@ const Card = ({annonce,user}) => {
             <div className=" p-1 flex justify-between">
                 <div>
                     <h3 className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold">{annonce.type} for {annonce.state}</h3>
-                    <p className="lg:text-[14px] md:text-[12px] sm;:text-[10px] text-[8px]">{user.firstName}</p>
+                    <p className="lg:text-[14px] md:text-[12px] sm;:text-[10px] text-[8px]">{annonce.userName}</p>
                 </div>
                 <div className="rating w-[40%] ">
                     <input type="radio" name="rating-1" disabled className="mask mask-star hover:cursor-default bg-orange-400" />
