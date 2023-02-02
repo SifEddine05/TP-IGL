@@ -287,10 +287,10 @@ const NewListing = () => {
                         <div className="w-full">
                             <select value={state} onChange={(e)=>{setState(e.target.value);}} className="w-full md:p-3 p-2  px-[10%] bg-white  lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] hover:cursor-pointer rounded-full opacity-75 focus:opacity-100 border-2 border-black">
                                 <option hidden value="" selected></option>
-                                <option value="Sell">Sell</option>
-                                <option value="Exchange" >Exchange</option>
-                                <option value="Rent">Rent</option>
-                                <option value="RentHolidays" >Rent for holidays</option>
+                                <option value="sell">Sell</option>
+                                <option value="exchange" >Exchange</option>
+                                <option value="eent">Rent</option>
+                                <option value="reentHolidays" >Rent for holidays</option>
                             </select>
                         </div>                    
                     </label>

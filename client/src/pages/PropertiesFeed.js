@@ -759,7 +759,7 @@ const PropertiesFeed = () => {
                     <option value="sell" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Sell</option>
                     <option value="exchange"  className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Exchange</option>
                     <option value="rent" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent</option>
-                    <option value="rent for holidays" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent for holidays</option>
+                    <option value="rentHolidays" className='lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]'>Rent for holidays</option>
                 </select>
             
                 <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}placeholder='City' className='border-2 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] lg:w-[17%] w-[33%] lg:mr-4 md:mr-3 sm:mr-2 mr-1 border-black md:p-3 p-2 rounded-full hover:cursor-pointer'/>
