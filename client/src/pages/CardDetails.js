@@ -8,6 +8,7 @@ import Nav from '../components/nav'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import MapAnnonces from '../components/MapAnnonces'
 const CardDetails = () => {
 // we must add the photos of annonce 
      let { cardId } = useParams();
@@ -15,6 +16,8 @@ const CardDetails = () => {
      const [Card , setCard] =useState({  // this set Table will be replaced by the fetch below 
           id:cardId,
           userName : "",
+          longitude:0,
+          latitude : 0,
           type: "" , 
           area : 0 , 
           dimX : 0 , 
@@ -35,6 +38,8 @@ const CardDetails = () => {
                area : 100 , 
                dimX : 10 , 
                dimY : 20 ,
+               longitude:3.1717269,
+               latitude : 36.7050299,
                nbrRooms : 3 , 
                price : 2000.00 , 
                state : "sell" , 
@@ -43,8 +48,6 @@ const CardDetails = () => {
                description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
            },)// this set Table will be replaced by the fetch below
-
-
               /*fetch('/getAnnonceByid')
                .then(res => {
                     if(!res.ok){
@@ -121,6 +124,7 @@ const CardDetails = () => {
                          </div>
                     </div>
                </div>
+               <MapAnnonces announces={Card}/>
            </div>
 
           <div className="modal" id="my-modal-2">
