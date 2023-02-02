@@ -8,6 +8,7 @@ import Nav from '../components/nav'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import MapAnnonces from '../components/MapAnnonces'
 const CardDetails = () => {
 // we must add the photos of annonce 
      let { cardId } = useParams();
@@ -15,6 +16,8 @@ const CardDetails = () => {
      const [Card , setCard] =useState({  // this set Table will be replaced by the fetch below 
           id:cardId,
           userName : "",
+          longitude:0,
+          latitude : 0,
           type: "" , 
           area : 0 , 
           dimX : 0 , 
@@ -35,6 +38,8 @@ const CardDetails = () => {
                area : 100 , 
                dimX : 10 , 
                dimY : 20 ,
+               longitude:3.1717269,
+               latitude : 36.7050299,
                nbrRooms : 3 , 
                price : 2000.00 , 
                state : "sell" , 
@@ -43,8 +48,6 @@ const CardDetails = () => {
                description : "fgdfg fghgfdh dtfh d fh d g hrt h r tg rt hd tr hddr th d th fh t ht  hg htr " , 
                images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
            },)// this set Table will be replaced by the fetch below
-
-
               /*fetch('/getAnnonceByid')
                .then(res => {
                     if(!res.ok){
@@ -110,10 +113,10 @@ const CardDetails = () => {
                          <div className="mt-[5%] lg:text-xl md:text-lg sm:text-md text-xs">Location</div>
                          <div className="mt-[3%] lg:text-xl md:text-lg sm:text-md text-xs">{Card.street} , {Card.city} </div>
                          <div className="w-full flex mt-[5%] justify-around mx-auto">
-                              <div className="w-full ml-[5%] "><button className="flex  md:px-6 px-3  items-center rounded-full md:p-3 p-2  hover:bg-black hover:bg-opacity-75 bg-black  " >
+                              <a  href="#my-modal-2" className="w-full ml-[5%] "><button className="flex  md:px-6 px-3  items-center rounded-full md:p-3 p-2  hover:bg-black hover:bg-opacity-75 bg-black  " >
                                    <div className="flex"><img src={aa} alt='aa'/></div>
                                    <div className="w-full pl-[2%] text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Call owner</div>
-                                   </button></div>
+                                   </button></a>
                               <div className="w-full  "><button className=" flex items-center  md:p-3 p-2  md:px-5 px-3    rounded-full border-2 border-black hover:bg-black hover:bg-opacity-10">
                                    <div><img src={tt} alt='tt'/></div>
                                    <div className=" w-full pl-[2%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Message owner</div>
@@ -121,7 +124,18 @@ const CardDetails = () => {
                          </div>
                     </div>
                </div>
-           </div> 
+               <MapAnnonces announces={Card}/>
+           </div>
+
+          <div className="modal" id="my-modal-2">
+               <div className="modal-box">
+               <h3 className="font-bold text-lg">Would you Call the owner ! </h3>
+               <p className="py-4">This is his phone number : 0558456920 </p>
+               <div className="modal-action">
+               <a href="#" className="btn"> OK! </a>    
+          </div>
+  </div>
+</div> 
         </div>
      );
 }
