@@ -38,9 +38,9 @@ const Nav = ({num}) => {
                     <Link  to="/EditProfile" className='w-[30%] hover:cursor-pointer'>
                         <img src={sett} alt="logo" className='w-[40%]' />
                     </Link>
-                    <div className='w-[30%] hover:cursor-pointer'>
+                    <Link  to='/showMsgs' className='w-[30%] hover:cursor-pointer'>
                         <Noty width={"40%"} color={"#000"} count={3} />
-                    </div>
+                    </Link>
                     <button className='w-[50%] hover:cursor-pointer text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] rounded-full bg-black p-2 hover:bg-white hover:text-black'>
                         <Link to='/NewListing'>+  New listing</Link>
                     </button>

@@ -18,7 +18,6 @@ export default function Noty({ width, color, count }) {
   return (
     <div>
       <div style={notyIconStyle}>
-        {count > 0 ? <div style={notyNumStyle}>{count}</div> : null}
 
         <svg
           viewBox="0 0 24 24"
