@@ -14,7 +14,7 @@ const CardDetails = () => {
 
      const [Card , setCard] =useState({  // this set Table will be replaced by the fetch below 
           id:cardId,
-          vendeur : "",
+          userName : "",
           type: "" , 
           area : 0 , 
           dimX : 0 , 
@@ -30,7 +30,7 @@ const CardDetails = () => {
      useEffect(()=>{
           setCard({  // this set Table will be replaced by the fetch below 
                id:cardId,
-               vendeur : "Nabila cherifi",
+               userName : "Nabila cherifi",
                type: "tiny" , 
                area : 100 , 
                dimX : 10 , 
@@ -65,7 +65,7 @@ const CardDetails = () => {
            <div className="pl-[5%] pr-[5%] pt-[2%] pb-[2%] ">
               
                <div className="font-bold lg:text-[24px] md:text-[21px] sm:text-[19px] text-[16px]">{Card.type} for {Card.state}</div>
-               <div className="lg:text-lg md:text-md sm:text-sm text-xs">{Card.vendeur}</div>
+               <div className="lg:text-lg md:text-md sm:text-sm text-xs">{Card.userName}</div>
 
 
                <div className=" pt-[2%]  w-full flex justify-between ">

@@ -10,6 +10,7 @@ import farms from '../photos/farms.svg'
 import lands from '../photos/lands.svg'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth"
 import axios from "axios"
 const UPLOAD_URL = "https://api.cloudinary.com/v1_1/dc3fxvt26/image/upload";
 
@@ -34,7 +35,7 @@ const NewListing = () => {
 
     const navigate = useNavigate()
 
-
+    const auth =useAuth()
     const uploadBase64Image = (base64Image) => {
         const formData = new FormData();
         formData.append('file', base64Image);
@@ -43,7 +44,7 @@ const NewListing = () => {
         return axios.post(UPLOAD_URL, formData)
           .then(response => response.data);
       };
-      
+
     const handlSubmit = ()=>{
         
         setErr(false)
@@ -61,6 +62,7 @@ const NewListing = () => {
             })
             const Annonce ={
                 type: type , 
+                userName :auth.user.firstName,
                 area : area , 
                 dimX : dimX , 
                 dimY : dimY ,

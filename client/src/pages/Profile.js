@@ -14,7 +14,7 @@ const Profile = () => {
     const [MyListing,setMyListing]=useState([ 
         // this set Table will be replaced by the fetch below 
         {   id:0,
-            type: "" , 
+            userName:"sifou", type: "" , 
             area : 0 , 
             dimX : 0 , 
             dimY : 0 ,
@@ -30,7 +30,7 @@ const Profile = () => {
   useEffect(()=>{
     setMyListing([  // this set Table will be replaced by the fetch below 
         {   id:1,
-            type: "tiny" , 
+            userName:"sifou", type: "tiny" , 
             area : 100 , 
             dimX : 10 , 
             dimY : 20 ,
@@ -43,7 +43,7 @@ const Profile = () => {
             images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
         },
         {   id:2,
-            type: "house" , 
+            userName:"sifou", type: "house" , 
             area : 100 , 
             dimX : 10 , 
             dimY : 20 ,
@@ -56,7 +56,7 @@ const Profile = () => {
             images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
         },
         {   id:3,
-            type: "house" , 
+            userName:"sifou", type: "house" , 
             area : 100 , 
             dimX : 10 , 
             dimY : 20 ,
@@ -69,7 +69,7 @@ const Profile = () => {
             images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
         },
     {       id:4 ,
-            type: "lux" , 
+            userName:"sifou", type: "lux" , 
             area : 100 , 
             dimX : 10 , 
             dimY : 20 ,
@@ -82,7 +82,7 @@ const Profile = () => {
             images : ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png","http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
         },
         {   id:5,
-            type: "lux" , 
+            userName:"sifou", type: "lux" , 
             area : 100 , 
             dimX : 10 , 
             dimY : 20 ,

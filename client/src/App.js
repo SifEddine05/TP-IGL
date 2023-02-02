@@ -9,22 +9,28 @@ import NewListing from "./pages/NewListing"
 import Profile from "./pages/Profile"
 import Editprofile from "./pages/Editprofile";
 import NotFound from './pages/NotFound'
-import { Routes,Route } from "react-router-dom";
+import { Routes,Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/auth";
 import { RequireAuth } from "./components/RequireAuth";
+import { useState } from 'react'
+import { useEffect } from 'react'
 function App() {
+  
+  
   return (
     <AuthProvider>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Login" element={<Login/>} />
-      <Route path="/SignUp" element={<SignUp />} />
+     {!localStorage.getItem('token') && <Route path="/Login" element={<Login/>} /> }
+     {!localStorage.getItem('token') && <Route path="/SignUp" element={<SignUp />} /> }
       <Route path="/PropertiesFeed" element={<RequireAuth><PropertiesFeed /></RequireAuth>} />
       <Route path="/NewListing" element={<RequireAuth><NewListing /></RequireAuth>} />
       <Route path="/Card/:cardId" element={<RequireAuth><CardDetails /></RequireAuth>} />
       <Route path="/Profile" element={<RequireAuth><Profile /></RequireAuth>} />
       <Route path="/EditProfile" element={<RequireAuth><Editprofile /></RequireAuth>} />
-      <Route path="*" element={<NotFound />} />
+     {localStorage.getItem('token') && <Route path="/Login" element={<Navigate to="/PropertiesFeed"  />} /> }
+     {localStorage.getItem('token') && <Route path="/SignUp" element={<Navigate to="/PropertiesFeed"  />} />}
+    <Route path="*" element={<NotFound />} /> 
     </Routes>
     </AuthProvider>
 
