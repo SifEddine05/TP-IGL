@@ -49,7 +49,7 @@ const NewListing = () => {
         
         setErr(false)
         //console.log(type,area ,dimX,dimY, nbrRooms , price ,city , street , description , images ,state );
-        if(area===0 || dimX===0 || dimY===0 || nbrRooms===0 || price===0 || state==="" || city==="" || street==='' || description==='' || images.length===0)
+        if(area===0 || dimX===0 || dimY===0 || nbrRooms===0 || price===0 || state==="" || city==="" || street==='' || description==='' ) //|| images.length===0
         {
             setMessage('Please fill in all fields') 
             setErr(true)
@@ -61,39 +61,94 @@ const NewListing = () => {
                     url.push(elem.url)
             })
             const Annonce ={
-                type: type , 
-                userName :auth.user.firstName,
+                user_id:localStorage.getItem('id'),
+                // type: type , 
+                // userName :auth.user.firstName,
                 area : area , 
-                dimX : dimX , 
-                dimY : dimY ,
-                nbrRooms : nbrRooms , 
+                dimensions:`${dimX} X ${dimY}`,
+                rooms : nbrRooms , 
                 price : price , 
-                state : state , 
+                type_of_property:type,
+                type_announcement : state , 
                 city : city , 
                 street :street , 
                 description : description , 
-                images : url 
-            }            
-            fetch('/addAnnonce' , {method: 'POST' , 
-            headers : {"Content-Type" : "application/json"},
-            body : JSON.stringify(Annonce) 
-          })
-          .then((res)=>{
-              if(!res.ok) {throw Error }
-              else{
-                navigate('/PropertiesFeed')
-              }
-            })
-          .catch((err)=>{
-              setMessage('Error message from the backend ') // we put the error message from the backend 
-              setErr(true)
-          })
+                // images : url 
+            }         
+            // add new annonce    
+            const AddNewAnnonce=async()=>{
+                let headersList = {
+                    "Accept": "*/*",
+                    "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+                    "Content-Type": "application/json"
+                   }
+                   
+                   let bodyContent = JSON.stringify(Annonce);
+                   
+                   let response = await fetch("http://localhost:5000/announces", { 
+                     method: "POST",
+                     body: bodyContent,
+                     headers: headersList
+                   });
+                   
+                   let data = await response.json();
+                   console.log(data);
+                   let announceId=data[0]
+
+                //     headersList = {
+                //     "Accept": "*/*",
+                //     "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+                //     "Content-Type": "application/json"
+                //    }
+                   for (let i=0;i<url.length;i++)
+                   {
+                    console.log(url[i])
+                    bodyContent = JSON.stringify({
+                             "user_id":localStorage.getItem('id'),
+                             "announce_id":announceId,
+                             "image":`${url[i]}`
+                           });
+                           
+                            response = await fetch("http://localhost:5000/announces/images", { 
+                             method: "POST",
+                             body: bodyContent,
+                             headers: headersList
+                           });
+                           
+                            data = await response.text();
+                           console.log(data);
+                   }
+                //     bodyContent = JSON.stringify({
+                //      "user_id":localStorage.getItem('id'),
+                //      "announce_id":data[0],
+                //      "image":"http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"
+                //    });
+                   
+                //     response = await fetch("http://localhost:5000/announces/images", { 
+                //      method: "POST",
+                //      body: bodyContent,
+                //      headers: headersList
+                //    });
+                   
+                //     data = await response.text();
+                //    console.log(data);
+                   
+                   
+            }
+
+            
+
+
+
+            AddNewAnnonce()
 
           // Do something with the uploaded images
         });
              
         }
     }
+
+
 
 
 

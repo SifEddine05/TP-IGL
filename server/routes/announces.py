@@ -1,6 +1,6 @@
 from datetime import date
 
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify,current_app, request
 
 from db import connect_to_database
 from helpers import auth_required
@@ -9,8 +9,8 @@ bp = Blueprint('announces', __name__)
 
 
 @bp.route('/announces', methods=['GET'])
-@auth_required
-def get_announces(current_user):
+# @auth_required
+def get_announces():
     conn = connect_to_database()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM announces")
@@ -49,14 +49,17 @@ def get_announces(current_user):
 
 
 @bp.route('/announces', methods=['POST'])
-@auth_required
-def create_announce(current_user):
-    user_id = current_user[0]
+# @auth_required
+def create_announce():
+    app = current_app
+    data = request.get_json()
+    print(data['user_id'])
     public_id = str(uuid.uuid4())
+    user_id = request.json['user_id']
     type_announcement = request.json['type_announcement']
     price = request.json['price']
     street=request.json['street']
-    state = request.json['state']
+    # state = request.json['state']
     city = request.json['city']
     created_at = date.today()
     area = request.json['area']
@@ -66,11 +69,15 @@ def create_announce(current_user):
     dimensions = request.json['dimensions']
     conn = connect_to_database()
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO announces (user_id, public_id, type_announcement, price, street, state, city, created_at, area, rooms, type_of_property, description, dimensions) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (user_id, public_id, type_announcement, price,street, state, city, created_at, area, rooms, type_of_property, description, dimensions))
+    cursor.execute("INSERT INTO announces (user_id, public_id, type_announcement, price, street, city, created_at, area, rooms, type_of_property, description, dimensions) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (user_id, public_id, type_announcement, price,street, city, created_at, area, rooms, type_of_property, description, dimensions))
     conn.commit()
+    cursor.execute("SELECT * FROM announces WHERE public_id = %s", (public_id,))
+    row = cursor.fetchone()
     cursor.close()
     conn.close()
-    return jsonify({'message': 'new announcement is added successfully'})
+    # return jsonify({'a': 'new announcement is added successfully'})
+    return jsonify(row)
+    # return jsonify({'a': 'new announcement is added successfully'})
 
 
 @bp.route('/announces/<announce_id>', methods=['GET'])
@@ -157,7 +164,7 @@ def user_announces(user_id):
     conn = connect_to_database()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM announces WHERE user_id = %s",
-                   (user_id))
+                   (user_id,))
     rows = cursor.fetchall()
     # converting the query objects to list of jsons
     output = []

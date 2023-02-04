@@ -128,7 +128,7 @@ const CardDetails = () => {
                          <div className="w-[45%] ">
                               <div className="flex justify-between items-center   ">
                                    <div className="text-[#FF5D02] font-bold w-full lg:text-xl md:text-lg sm:text-md text-xs">{Card.price} DA</div>
-                                   <div className="w-full ml-[20%]  "><Link to="/sendMsg" className="text-black lg:text-xl md:text-lg sm:text-md text-xs bg-[#FF5D02] hover:bg-gray-600  hover:text-white rounded-full pt-[5%] pb-[5%] pl-[10%] pr-[10%]">Buy this appartment</Link></div>
+                                   <div onClick={()=>{localStorage.setItem('id_announce',cardId)}} className="w-full ml-[20%]  "><Link to="/sendMsg" className="text-black lg:text-xl md:text-lg sm:text-md text-xs bg-[#FF5D02] hover:bg-gray-600  hover:text-white rounded-full pt-[5%] pb-[5%] pl-[10%] pr-[10%]">Buy this appartment</Link></div>
                               </div>
                               <div className="mt-[5%] lg:text-sm md:text-xs sm:text-[12px] text-[10px] ">About this property</div>
                               <div className=" flex justify-between pl-[5%] pr-[5%] pt-[2%] pb-[2%] mt-[5%]  text-black w-full">
@@ -155,7 +155,7 @@ const CardDetails = () => {
                                         <div className="flex"><img src={aa} alt='aa' /></div>
                                         <div className="w-full pl-[2%] text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Call owner</div>
                                    </button></a>
-                                   <div className="w-[50%]  "><Link to='/sendMsg' className=" flex items-center  md:p-3 p-2  rounded-full border-2 border-black hover:bg-black hover:bg-opacity-10">
+                                   <div onClick={()=>{localStorage.setItem('id_announce',cardId)}} className="w-[50%]  "><Link to='/sendMsg' className=" flex items-center  md:p-3 p-2  rounded-full border-2 border-black hover:bg-black hover:bg-opacity-10">
                                         <div><img src={tt} alt='tt' /></div>
                                         <div className=" w-full pl-[2%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]">Message owner</div>
                                    </Link></div>
