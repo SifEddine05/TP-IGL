@@ -26,11 +26,10 @@ const CardDetails = () => {
           dimY: 0,
           nbrRooms: 0,
           price: 0,
-          state: "",
           city: "",
           street: "",
           description: "",
-          images: [""]
+          images: []
      })
      useEffect(() => {
           let data;
@@ -40,7 +39,7 @@ const CardDetails = () => {
                     "Content-Type": "application/json"
                }
 
-               let response = await fetch("http://127.0.0.1:5000/announces/2", {
+               let response = await fetch(`http://127.0.0.1:5000/announces/${localStorage.getItem('id_announce')}`, {
                     method: "GET",
                     headers: headersList
                });
@@ -59,12 +58,11 @@ const CardDetails = () => {
                     latitude: 36.7050299,
                     nbrRooms: data.announce[0].rooms,
                     price: data.announce[0].price,
-                    state: data.announce[0].state,
                     city:data.announce[0].city ,
                     street: data.announce[0].street,
                     description: data.announce[0].description,
-                    images: ["http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png", "http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png", "http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png", "http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png", "http://res.cloudinary.com/dc3fxvt26/image/upload/v1675290300/ld9h2dmnnina4qi9pjmw.png"]
-               },)
+                    images: data.announce[0].images
+               })
      
 
 
@@ -106,7 +104,7 @@ const CardDetails = () => {
                <Nav num={true} />
                <div className="pl-[5%] pr-[5%] pt-[2%] pb-[2%] ">
 
-                    <div className="font-bold lg:text-[24px] md:text-[21px] sm:text-[19px] text-[16px]">{Card.type} for {Card.state}</div>
+                    <div className="font-bold lg:text-[24px] md:text-[21px] sm:text-[19px] text-[16px]">{Card.type} for {Card.type_announcement}</div>
                     <div className="lg:text-lg md:text-md sm:text-sm text-xs">{Card.userName}</div>
 
 

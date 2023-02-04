@@ -21,20 +21,20 @@ def get_announces():
     for row in rows:
         # appending the user data json to the response list
         output.append({
-            'id': row[0],
+           'id': row[0],
             'user_id': row[1],
             'public_id': row[2],
             'type_announcement': row[3],
             'price': row[4],
             'street':row[5],
-            'state': row[6],
-            'city': row[7],
-            'created_at': row[8],
-            'area': row[9],
-            'rooms': row[10],
-            'type_of_property': row[11],
-            'description': row[12],
-            'dimensions': row[13],
+            'city': row[6],
+            'created_at': row[7],
+            'area': row[8],
+            'rooms': row[9],
+            'type_of_property': row[10],
+            'description': row[11],
+            'dimensions': row[12],
+            'images': []
         })
     # Fetch announce images
     cursor.execute("SELECT * FROM images")
@@ -97,14 +97,13 @@ def show_announce(announce_id):
             'type_announcement': row[3],
             'price': row[4],
             'street':row[5],
-            'state': row[6],
-            'city': row[7],
-            'created_at': row[8],
-            'area': row[9],
-            'rooms': row[10],
-            'type_of_property': row[11],
-            'description': row[12],
-            'dimensions': row[13],
+            'city': row[6],
+            'created_at': row[7],
+            'area': row[8],
+            'rooms': row[9],
+            'type_of_property': row[10],
+            'description': row[11],
+            'dimensions': row[12],
             'images': []
     })
     # Fetch announce images
@@ -177,14 +176,13 @@ def user_announces(user_id):
             'type_announcement': row[3],
             'price': row[4],
             'street':row[5],
-            'state': row[6],
-            'city': row[7],
-            'created_at': row[8],
-            'area': row[9],
-            'rooms': row[10],
-            'type_of_property': row[11],
-            'description': row[12],
-            'dimensions': row[13],
+            'city': row[6],
+            'created_at': row[7],
+            'area': row[8],
+            'rooms': row[9],
+            'type_of_property': row[10],
+            'description': row[11],
+            'dimensions': row[12],
             'images': []
  
         })

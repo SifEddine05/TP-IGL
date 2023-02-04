@@ -49,7 +49,7 @@ const NewListing = () => {
         
         setErr(false)
         //console.log(type,area ,dimX,dimY, nbrRooms , price ,city , street , description , images ,state );
-        if(area===0 || dimX===0 || dimY===0 || nbrRooms===0 || price===0 || state==="" || city==="" || street==='' || description==='' ) //|| images.length===0
+        if(area===0 || dimX===0 || dimY===0 || nbrRooms===0 || price===0 || state==="" || city==="" || street==='' || description===''|| images.length===0 ) //
         {
             setMessage('Please fill in all fields') 
             setErr(true)

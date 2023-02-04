@@ -111,6 +111,9 @@ const Profile = () => {
            console.log(data.announces);
            setMyListing(data.announces)
 
+           
+           
+
     }
     getUserAnnonces()
    

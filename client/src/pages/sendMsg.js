@@ -37,7 +37,7 @@ const SendMsg = () => {
                     "message": messageget
                 });
 
-                let response = await fetch("http://127.0.0.1:5000/announces/1/place-order", {
+                let response = await fetch(`http://127.0.0.1:5000/announces/${localStorage.getItem('id_announce')}/place-order`, {
                     method: "POST",
                     body: bodyContent,
                     headers: headersList
