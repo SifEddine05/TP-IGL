@@ -9,7 +9,6 @@ bp = Blueprint('announces', __name__)
 
 
 @bp.route('/announces', methods=['GET'])
-# @auth_required
 def get_announces():
     conn = connect_to_database()
     cursor = conn.cursor()
@@ -49,7 +48,6 @@ def get_announces():
 
 
 @bp.route('/announces', methods=['POST'])
-# @auth_required
 def create_announce():
     app = current_app
     data = request.get_json()
@@ -81,7 +79,6 @@ def create_announce():
 
 
 @bp.route('/announces/<announce_id>', methods=['GET'])
-# @auth_required
 def show_announce(announce_id):
     conn = connect_to_database()
     cursor = conn.cursor()
@@ -117,7 +114,6 @@ def show_announce(announce_id):
 
 
 @bp.route('/announces/<announce_id>', methods=['PUT'])
-@auth_required
 def update_announce(current_user, announce_id):
     # check if the user is an admin or the owner of the announce
     conn = connect_to_database()
@@ -138,7 +134,6 @@ def update_announce(current_user, announce_id):
 
 
 @bp.route('/announces/<announce_id>', methods=['DELETE'])
-@auth_required
 def delete_announce(current_user, announce_id):
     # check if the user is an admin or the owner of the announce
     conn = connect_to_database()
@@ -158,7 +153,6 @@ def delete_announce(current_user, announce_id):
 
 
 @bp.route('/my-announces/<user_id>', methods=['GET'])
-# @auth_required
 def user_announces(user_id):
     conn = connect_to_database()
     cursor = conn.cursor()
@@ -267,3 +261,20 @@ def search(current_user):
             'dimensions': row[13],
         })
     return jsonify({'announces': output})
+
+#get the link of the  map of the announce 
+@bp.route('/announces/<announce_id>/map', methods=['GET'])
+def get_map_link( announce_id):
+        conn = connect_to_database()
+        cursor = conn.cursor()
+        cursor.execute("SELECT street, city FROM announces WHERE id = %s", (announce_id,))
+        announce = cursor.fetchone()
+        cursor.close()
+        conn.close()
+        if not announce:
+            return jsonify({'message': 'No announce found!'})
+        else:
+            street = announce[0]
+            city = announce[1]
+            link = "https://www.google.com/maps/place/" + street + "," + city
+            return jsonify({'link': link})

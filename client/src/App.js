@@ -16,14 +16,14 @@ import { AuthProvider } from "./context/auth";
 import { RequireAuth } from "./components/RequireAuth";
 import ShowMsgs from "./pages/showMsgs";
 import PrivateRoutes from "./components/PrivateRoutes";
+import { useEffect } from "react";
 function App() {
-
+  useEffect(()=>{
+    localStorage.setItem('token',"")
+  },[])
 
   return (
     <AuthProvider>
-    
-
-     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
@@ -48,7 +48,6 @@ function App() {
       <Route path="/showMsgs" element={<RequireAuth><ShowMsgs /></RequireAuth>} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-      
     </AuthProvider>
 
   );

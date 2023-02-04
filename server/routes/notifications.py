@@ -7,7 +7,6 @@ bp = Blueprint('notifications', __name__)
 
 
 @bp.route('/notifications', methods=['GET'])
-@auth_required
 def get_notifications(current_user):
     conn = connect_to_database()
     cursor = conn.cursor()
@@ -30,37 +29,23 @@ def get_notifications(current_user):
     return jsonify({'notifications': output})
 
 
-
-@bp.route('/sendNotifications', methods=['POST'])
-# @auth_required
-def sendNotifications():
-    data = request.get_json()
-    print("*****************************")
-    print("before data ")
-    print("*****************************")
-    
-    # data = request.get_json()
-    # print("*****************************")
-    print(data['type'])
-    # print("*****************************")
-    # conn = connect_to_database()
-    # cursor = conn.cursor()
+@bp.route('/notifications/<notification_id>/seen', methods=['POST'])
+def seen_notification(current_user, notification_id):
+    conn = connect_to_database()
+    cursor = conn.cursor()
     # check if the notification exists
-    # cursor.execute("SELECT * FROM notifications WHERE id = %s",
-    #                (notification_id,))
-    # notification = cursor.fetchone()
-    # if not notification:
-    #     return jsonify({'message': 'Notification not found'}), 404
-    # # check if the user is the owner of the notification
-    # if notification[1] != current_user[0]:
-    #     return jsonify({'message': 'You are not allowed to do this'}), 401
-    # # change the seen status of the notification
-    # cursor.execute(
-    #     "UPDATE notifications SET seen = %s WHERE id = %s", (True, notification_id))
-    # conn.commit()
-    # cursor.execute("INSERT INTO notifications (user_id, announce_id, type, price,message,phone) VALUES (%s, %s, %s, %s, %s, %s)", (request.json['user_id'], request.json['announce_id'], request.json['type'],request.json['price'],request.json['message'],request.json['phone'],))
-    # conn.commit()
-    return jsonify({'message': 'Notification has been added'}), 200
+    cursor.execute("SELECT * FROM notifications WHERE id = %s",
+                   (notification_id,))
+    notification = cursor.fetchone()
+    if not notification:
+        return jsonify({'message': 'Notification not found'}), 404
+    # check if the user is the owner of the notification
+    if notification[1] != current_user[0]:
+        return jsonify({'message': 'You are not allowed to do this'}), 401
+    # change the seen status of the notification
+    cursor.execute(
+        "UPDATE notifications SET seen = %s WHERE id = %s", (True, notification_id))
+    conn.commit()
+    return jsonify({'message': 'Notification has been seen'}), 200
 
 
-        # cursor.execute("INSERT INTO notifications (user_id, announce_id, type) VALUES (%s, %s, %s)",
