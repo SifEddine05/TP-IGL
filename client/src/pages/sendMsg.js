@@ -52,14 +52,14 @@ const SendMsg = () => {
     return ( 
 <div>
 <Nav num={true} />
-<div className="  w-full flex justify-center">
+<div className="  w-full flex justify-center bg-white">
             
     
             <div className=" self-center   justify-center items-center lg:w-[60%] sm:w-[75%] w-[90%] mt-1">
                 <h3 className="lg:text-[28px] md:text-[22px] sm:text-[16px] text-[13px] font-medium text-center  pt-2"> Send Offer </h3>
                 <div className="flex justify-around  pt-2 w-full">
                 <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[22%] mr-2 flex justify-center flex-col  ">Price<br/>
-                        <input value={Price} onChange={(e)=>{setPrice(e.target.value)}} type="number" step="0.01" maxLength="10" min="0" id="Price" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black"/>
+                        <input value={Price} onChange={(e)=>{setPrice(e.target.value)}} type="number" step="0.01" maxLength="10" min="0" id="Price" placeholder="" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black"/>
                      </label>  
                      <label className=" bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[22%] flex justify-center flex-col  ">State<br/>
                      <select value={type} onChange={(e)=>{setType(e.target.value)}} className=" bg-white  hove:cursor-pointer lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black ">
@@ -73,8 +73,8 @@ const SendMsg = () => {
                                     
                     </div>
                 <div className="flex justify-center sm:py-3 py-2 w-full">
-                <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[45%] mr-2 flex justify-center flex-col  ">Phone<br/>
-                        <input value={phone} onChange={(e)=>{setPhone(e.target.value)}}  type="text"  maxLength="10" min="0" id="Price" placeholder="Phone Number" className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black"/>
+                <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[45%] mr-2 flex justify-center flex-col bg-white ">Phone<br/>
+                        <input value={phone} onChange={(e)=>{setPhone(e.target.value)}}  type="text"  maxLength="10" min="0" id="Price" placeholder="Phone Number" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black"/>
                      </label>
 
                  </div>
@@ -85,7 +85,7 @@ const SendMsg = () => {
     
                 <div className=" w-[75%] mx-auto">
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[100%] flex justify-center flex-col  ">Message<br/>
-                    <textarea  id="Description" name="Description" rows="8" cols="50" className=" lg:p-6 md:p-4 sm:p-2 p-1 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] mt-2 border-2 border-black rounded-lg"></textarea>                    </label>
+                    <textarea  id="Description" name="Description" rows="8" cols="50" className="bg-white lg:p-6 md:p-4 sm:p-2 p-1 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] mt-2 border-2 border-black rounded-lg"></textarea>                    </label>
                 </div>
                 {err && <div  className="w-[100%] mx-auto lg:pt-2 pt-1" >
                     <p className="text-center font-bold lg:text-[18px] md:text-[16px] sm:text-[13px] text-[10px] text-red-600 ">{message}</p>
