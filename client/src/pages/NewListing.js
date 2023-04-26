@@ -217,15 +217,15 @@ const NewListing = () => {
             <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4  lg:pl-6 md:pl-4 sm:pl-3 pl-2 ">
                 <h3 className="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] lg:pb-4 md:pb-3 pb-2">Type of property</h3>
                 <div className="flex justify-around items-center w-[90%] mx-auto">
-                    <input type="radio" name="type" id="house" value="house" className="hidden" onClick={chooseType}/>
+                    <input type="radio" name="type" id="house" value="house" className="bg-white hidden" onClick={chooseType}/>
                     <label htmlFor="house" className={style1}>
-                        <img src={house} alt="home" className="w-[80%] p-1"/>
+                        <img src={house} alt="home" className="sm:w-[80%] w-full sm:p-1"/>
                     </label>
-                    <input type="radio" name="type" id="tiny" className="hidden" value="tiny" onClick={chooseType} />
+                    <input type="radio" name="type" id="tiny" className="hidden bg-white" value="tiny" onClick={chooseType} />
                     <label htmlFor="tiny" className={style2}>
                         <img src={tiny} alt="home" className="w-full "/>
                     </label>
-                    <input type="radio" name="type" id="lux" className="hidden" value="lux" onClick={chooseType}/>
+                    <input type="radio" name="type" id="lux" className=" bg-white hidden" value="lux" onClick={chooseType}/>
                     <label htmlFor="lux"  className={style3}>
                         <img src={lux} alt="home" className=" w-full "/>
                     </label>
@@ -239,40 +239,40 @@ const NewListing = () => {
                     </label>
                     <input type="radio" name="type" id="farms" className="hidden" value="farms" onClick={chooseType}/>
                     <label htmlFor="farms"  className={style6}>
-                      <img src={farms} alt="home" className="w-[80%] p-1"/>
+                      <img src={farms} alt="home" className="sm:w-[80%] w-full sm:p-1"/>
                     </label>
                     <input type="radio" name="type" id="lands" className="hidden" value="lands" onClick={chooseType}/>
                     <label htmlFor="lands"  className={style7}>
-                        <img src={lands} alt="home" className="w-[80%] p-1 "/>
+                        <img src={lands} alt="home" className="sm:w-[80%] w-full sm:p-1 "/>
                     </label>
                 </div>
                 <div className="lg:pt-10 md:pt-8 sm:pt-6 pt-4 flex justify-between items-center w-[90%] mx-auto ">
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col ">Area (m²)<br/>
-                    <input type="number" value={area} onChange={(e)=>{setArea(e.target.value)}} maxLength="10" min="0" id="Area" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] p-2 px-[10%] rounded-full border-2 border-black"/>
+                    <input type="number" value={area} onChange={(e)=>{setArea(e.target.value)}} maxLength="10" min="0" id="Area" placeholder="" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] p-2 px-[10%] rounded-full border-2 border-black"/>
                     </label>
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col items-center text-left">Dimensions (m) <br/>
                         <div className="flex justify-start w-[100%] items-center ">
-                            <input value={dimX} onChange={(e)=>{setDimX(e.target.value)}} type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="w-[75%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2 sm:pl-4  rounded-full border-2 border-black"/>
+                            <input value={dimX} onChange={(e)=>{setDimX(e.target.value)}} type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="bg-white w-[75%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2 sm:pl-4  rounded-full border-2 border-black"/>
                             <h3 className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold">X</h3>
-                            <input  value={dimY} onChange={(e)=>{setDimY(e.target.value)}} type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="w-[75%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2  sm:pl-4 rounded-full border-2 border-black"/>
+                            <input  value={dimY} onChange={(e)=>{setDimY(e.target.value)}} type="number" maxLength="10" min="0" id="Dimensions" placeholder="" className="bg-white w-[75%] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2  sm:pl-4 rounded-full border-2 border-black"/>
                         </div>
                     </label>
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]  w-[30%] flex justify-center flex-col  ">Number of rooms<br/>
-                    <input value={nbrRooms} onChange={(e)=>{setNbrRooms(e.target.value)}} type="number" maxLength="3" min="0" id="Number_of_rooms" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] p-2 px-[15%] rounded-full border-2 border-black"/>
+                    <input value={nbrRooms} onChange={(e)=>{setNbrRooms(e.target.value)}} type="number" maxLength="3" min="0" id="Number_of_rooms" placeholder="" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] p-2 px-[15%] rounded-full border-2 border-black"/>
                     </label>
                 </div>
 
                 <div className="w-[90%] mx-auto flex justify-between  items-center lg:py-10 md:py-8 sm:py-6 py-4 " >
-                   <div className="w-[12%]">
+                   <div className="w-[100%]">
                         <h3 className="lg:text-[18px] md:text-[16px] sm:text-[14px] text-[12px] pb-1">Type of property</h3>
-                        <div className="flex justify-start relative">
+                        <div className="flex justify-start relative w-[15%]">
                             <button className={stl1} onClick={handlcheck}>Sell</button>
                             <button className={stl2} onClick={handlcheck}>Rent</button>
                         </div>
                      </div> 
                     <div className="w-[58%] self-end">
                         <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[35%] flex justify-center flex-col  ">Price<br/>
-                        <input value={price} onChange={(e)=>{setPrice(e.target.value)}} type="number" step="0.01" maxLength="10" min="0" id="Price" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black"/>
+                        <input value={price} onChange={(e)=>{setPrice(e.target.value)}} type="number" step="0.01" maxLength="10" min="0" id="Price" placeholder="" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] md:p-3 sm:p-2 p-1  mt-1 px-[15%] rounded-full border-2 border-black"/>
                         </label>
                     </div>
                    
@@ -295,23 +295,23 @@ const NewListing = () => {
                         </div>                    
                     </label>
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col ">City<br/>
-                        <input value={city} onChange={(e)=>{setCity(e.target.value)}} type="text" maxLength="30"  id="City" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2 px-[15%] rounded-full border-2 border-black"/>
+                        <input value={city} onChange={(e)=>{setCity(e.target.value)}} type="text" maxLength="30"  id="City" placeholder="" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2 px-[15%] rounded-full border-2 border-black"/>
                     </label>
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[30%] flex justify-center flex-col  ">Street<br/>
-                    <input value={street} onChange={(e)=>{setStreet(e.target.value)}} type="text" maxLength="30"  id="Street" placeholder="" className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2 px-[15%] rounded-full border-2 border-black"/>
+                    <input value={street} onChange={(e)=>{setStreet(e.target.value)}} type="text" maxLength="30"  id="Street" placeholder="" className="bg-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] p-2 px-[15%] rounded-full border-2 border-black"/>
                     </label>
                 </div>
 
                 <div className="lg:my-[75px] md:my-[65px] sm:my-[55px] my-[45px] w-[90%] mx-auto">
                     <label className="lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] w-[100%] flex justify-center flex-col  ">Description<br/>
-                    <textarea value={description} onChange={(e)=>{setDescription(e.target.value)}} id="Description" name="Description" rows="8" cols="50" className=" lg:p-6 md:p-4 sm:p-2 p-1 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] mt-2 border-2 border-black rounded-lg"></textarea>                    </label>
+                    <textarea value={description} onChange={(e)=>{setDescription(e.target.value)}} id="Description" name="Description" rows="8" cols="50" className="bg-white lg:p-6 md:p-4 sm:p-2 p-1 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] mt-2 border-2 border-black rounded-lg"></textarea>                    </label>
                 </div>
                 {err && <div  className="w-[100%] mx-auto lg:pt-2 pt-1" >
                     <p className="text-center font-bold lg:text-[18px] md:text-[16px] sm:text-[13px] text-[10px] text-red-600 ">{message}</p>
                 </div> }
                 <div className="flex justify-end  lg:pb-10 md:pb-8 sm:pb-6 pb-4">
-                    <button className="md:p-3 p-2 border-2 lg:mr-6 md:mr-4 sm:mr-2 mr-1 border-black rounded-full text-center lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] shadow-md hover:bg-black hover:bg-opacity-20">Save draft</button>
-                    <button className="md:p-3 p-2 border-2 border-black bg-black rounded-full text-center text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]  shadow-md hover:bg-[#002E7C] lg:px-6 md:px-4 sm:px-2 px-1" onClick={handlSubmit}>Publish</button>
+                    <button className="md:p-3 p-2 border-2 lg:mr-6 md:mr-4 sm:mr-2 mr-1 border-black rounded-full text-center lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] shadow-md hover:bg-black hover:text-white">Save draft</button>
+                    <button className="md:p-3 p-2 border-2 border-black bg-black rounded-full text-center text-white lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px]  shadow-md hover:bg-[#FF5D02] lg:px-6 md:px-4 sm:px-2 px-1" onClick={handlSubmit}>Publish</button>
                 </div>
                 
 

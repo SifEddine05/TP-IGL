@@ -96,18 +96,18 @@ const Login = () => {
             </div>
             <h3 className="lg:text-[28px] md:text-[22px] sm:text-[16px] text-[13px] font-medium text-center lg:py-5 md:py-4 sm:py-3 py-2"> Welcome back! </h3>
             <div className="flex justify-center lg:py-5 md:py-4 sm:py-3 py-2 w-full">
-                <input  type="email" value={email} minlength="5" onChange={(e)=>{setEmail(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Email address"  />
+                <input  type="email" value={email} minlength="5" onChange={(e)=>{setEmail(e.target.value)}} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none lg:w-[45%]  w-[90%] border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Email address"  />
              </div>
 
              <div className="flex justify-center lg:py-5 md:py-4 sm:py-3 py-2 w-full">
-                 <div className="w-[45%] relative">
-                    <input  type={type} value={password}  minlength="5" onChange={(e)=>{setPassword(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Password"  />
+                 <div className="lg:w-[45%]  w-[90%] relative">
+                    <input  type={type} value={password}  minlength="5" onChange={(e)=>{setPassword(e.target.value)}} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full md:p-3 p-2 md:px-5 px-3"placeholder="Password"  />
                   {!show  && 
-                    <div className="w-[10%] absolute top-3  right-4 hover:cursor-pointer" onClick={handlClick } >
+                    <div className="w-[10%] absolute lg:top-3 sm:top-0 top-1  right-4 hover:cursor-pointer" onClick={handlClick } >
                       <img src={eye} alt="close eye" />
                      </div> }
                      {show  && 
-                    <div className="w-[10%] absolute top-3  right-4 hover:cursor-pointer" onClick={handlClick } >
+                    <div className="w-[10%] absolute lg:top-3 sm:top-0 top-1 right-4 hover:cursor-pointer" onClick={handlClick } >
                       <img src={eyeOpen} alt="open eye" />
                      </div> }
                  </div>
@@ -115,7 +115,7 @@ const Login = () => {
 
              <div class="flex justify-around  items-center w-[50%] mx-auto">
                 <label className="flex justify-start items-center text-gray-500 font-bold my-4">
-                    <input type="checkbox"className="leading-loose text-pink-600 hover:cursor-pointer" />
+                    <input type="checkbox"className="bg-white leading-loose text-pink-600 hover:cursor-pointer" />
                     <span className="py-2 px-2 lg:text-[14px] md:text-[12px]  sm:text-[10px] text-[8px] text-gray-600 leading-snug"> RememberMe </span>
                 </label>
                 <h3 className="py-2 lg:text-[14px] md:text-[12px]  sm:text-[10px]  text-[8px]  text-gray-600 leading-snug opacity-75 hover:text-[#177aeb]"><a href="/frgpass">Forgot password</a></h3> 

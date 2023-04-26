@@ -91,7 +91,7 @@ const ShowMsgs = () => {
                 <h3 className=" text-center  lg:text-[20px] md:text-[14px] sm:text-[12px] text-[9px]  text-[#000]">Price Offred : <span className='text-white'>{elem.Price} DA</span></h3>
                 <h3 className=" text-center  lg:text-[20px] md:text-[14px] sm:text-[12px] text-[9px]  text-[#000]"> Buyer's Phone Number : <span className='text-white'>{elem.phone}</span></h3>
                 <h3 className=" text-center  lg:text-[20px] md:text-[14px] sm:text-[12px] text-[9px]  text-[#000]"> Buyer's Email : <span className='text-white'>{elem.user.email}</span></h3>
-                <Link to={"/Card/"+elem.annonceId} className="ml-[10%] hover:text-[#000]" >See My Annonce </Link>
+                <Link to={"/Card/"+elem.annonceId} className="ml-[10%]  lg:text-[20px] md:text-[14px] sm:text-[12px] text-[9px]  hover:text-[#000]" >See My Annonce </Link>
             </div>)
             })
         }

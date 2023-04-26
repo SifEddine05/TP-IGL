@@ -6,3 +6,7 @@ body {
     color: black;
     background-color: white;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+}
