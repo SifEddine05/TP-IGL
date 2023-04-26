@@ -102,56 +102,56 @@ const SignUp = () => {
             }
         }        
         return ( 
-        <div className="  w-full flex justify-between">
+        <div className="  w-full flex justify-between bg-white h-screen">
             <div className="self-end w-[10%]">
                 <img src={Exb} alt="exclude" className="w-[100%]"/>
             </div>
     
-            <div className=" self-center   justify-center items-center lg:w-[60%] sm:w-[75%] w-[90%]">
+            <div className=" self-center   justify-center items-center lg:w-[60%] sm:w-[75%] w-full">
                 <div className="flex justify-center items-center w-[50%] mx-auto">
                     <img src={logo} alt="logo" className="w-[12%]"/>
-                    <h3 className="lg:text-[36px] md:text-[26px] text-[20px] text-[17px]font-black  p-1 ">DARNAB</h3>
+                    <h3 className="lg:text-[36px] md:text-[26px] text-[20px]  font-black  p-1 ">DARNAB</h3>
                 </div>
                 <h3 className="lg:text-[28px] md:text-[22px] sm:text-[16px] text-[13px] font-medium text-center sm:py-3 py-2"> Create you account </h3>
                 <div className="flex justify-center sm:py-3 py-2 w-full">
-                    <input  type="text" value={firstName} onChange={(e)=>{setFirstName(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[22%] mr-[1%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="First Name"  />
-                    <input  type="text" value={lastName} onChange={(e)=>{setLastName(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[22%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Last Name"  />
+                    <input  type="text" value={firstName} onChange={(e)=>{setFirstName(e.target.value)}} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none lg:w-[22%] w-[45%] mr-[1%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="First Name"  />
+                    <input  type="text" value={lastName} onChange={(e)=>{setLastName(e.target.value)}} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none lg:w-[22%] w-[45%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Last Name"  />
                  </div>
                 <div className="flex justify-center sm:py-3 py-2 w-full">
-                    <input  type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-[45%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Email address"  />
+                    <input  type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none lg:w-[45%] w-[90%] border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3"placeholder="Email address"  />
                  </div>
     
                  <div className="flex justify-center sm:py-3 py-2 w-full">
-                     <div className="w-[45%] relative">
-                        <input  type={type} value={password} onChange={(e)=>{setPassword(e.target.value)}} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full  p-2 px-3"placeholder="Password"  />
+                     <div className="lg:w-[45%] w-[90%] relative">
+                        <input  type={type} value={password} onChange={(e)=>{setPassword(e.target.value)}} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full  p-2 px-3"placeholder="Password"  />
                       {!show  && 
-                        <div className="w-[10%] absolute top-2  right-4 hover:cursor-pointer" onClick={handlClick } >
+                        <div className="w-[10%] absolute lg:top-2 sm:top-0 top-1  right-4 hover:cursor-pointer" onClick={handlClick } >
                           <img src={eye} alt="close eye" />
                          </div> }
                          {show  && 
-                        <div className="w-[10%] absolute top-2  right-4 hover:cursor-pointer" onClick={handlClick } >
+                        <div className="w-[10%] absolute lg:top-2 sm:top-0 top-1  right-4 hover:cursor-pointer" onClick={handlClick } >
                           <img src={eyeOpen} alt="open eye" />
                          </div> }
                      </div>
                  </div>
 
                  <div className="flex justify-center  sm:pt-3 pt-2 w-full">
-                     <div className="w-[45%] relative">
-                        <input value={confirmePassword} onChange={(e)=>{setConfirmePassword(e.target.value)}} type={type2} className=" lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3" placeholder="Confirm Password"  />
+                     <div className="lg:w-[45%] w-[90%] relative">
+                        <input value={confirmePassword} onChange={(e)=>{setConfirmePassword(e.target.value)}} type={type2} className="bg-white lg:text-[16px] md:text-[14px] sm:text-[11px] text-[9px] border-gray-600 focus:outline-none w-full border-2  focus:border-[#FFC29F] rounded-full  p-2  px-3" placeholder="Confirm Password"  />
                       {!show2  && 
-                        <div className="w-[10%] absolute top-3  right-4 hover:cursor-pointer" onClick={handlClick2 } >
+                        <div className="w-[10%] absolute lg:top-3 sm:top-0 top-1  right-4 hover:cursor-pointer" onClick={handlClick2 } >
                           <img src={eye} alt="close eye" />
                          </div> }
                          {show2  && 
-                        <div className="w-[10%] absolute top-3  right-4 hover:cursor-pointer" onClick={handlClick2 } >
+                        <div className="w-[10%] absolute lg:top-3 sm:top-0 top-1  right-4 hover:cursor-pointer" onClick={handlClick2 } >
                           <img src={eyeOpen} alt="open eye" />
                          </div> }
                      </div>
                  </div>
     
-                 <div class="flex justify-start pl-2  items-center w-[50%] mx-auto">
+                 <div class="flex justify-start pl-2  items-center lg:w-[50%] w-[80%] mx-auto">
                     <label className="flex justify-start pl-2 items-center text-gray-500 font-bold my-4">
-                        <input type="checkbox" value={agree} onChange={(e)=>{setAgree(!agree)}}  className="leading-loose text-pink-600 hover:cursor-pointer" />
+                        <input type="checkbox" value={agree} onChange={(e)=>{setAgree(!agree)}}  className="bg-white leading-loose text-pink-600 hover:cursor-pointer" />
                         <span className="pt-2 px-2 lg:text-[14px] md:text-[12px]  sm:text-[10px] text-[8px] text-gray-600 leading-snug"> I agree at Terms & Conditions </span>
                     </label>
                 </div>
