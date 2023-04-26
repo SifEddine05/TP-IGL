@@ -20,8 +20,8 @@ const Nav = ({num}) => {
     }
     return ( 
         <div>
-            <nav className='bg-[#FF5D02] lg:p-3  sm:p-2 p-1 flex justify-between items-center'>
-                    <div className=" pt-[1%] flex justify-start items-center">
+            <nav className='bg-[#FF5D02] lg:p-2  sm:p-2 p-1 flex justify-between items-center'>
+                    <div className="  flex justify-start items-center">
                          <img src={logo} alt="logo" className="sm:w-[65px] w-[40px] "/>
                          <h3 className="lg:text-[36px] md:text-[26px] sm:text-[20px] text-[17px] font-black">DARNAB</h3>
                    </div>
