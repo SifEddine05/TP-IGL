@@ -36,9 +36,6 @@ const Nav = ({num}) => {
                     <button className="lg:text-[20px] md:text-[17px] sm:text-[14px] text-[11px] hover:text-white" onClick={()=>{setLogout(true)}} >Logout</button>
                 </div>
                 <div className='w-[30%] flex justify-around items-center  gap-2'>
-                    <Link  to="/EditProfile" className='sm:w-[40px] w-[30%] hover:cursor-pointer'>
-                        <img src={sett} alt="logo" className='w-full' />
-                    </Link>
                     <Link  to='/showMsgs' className='sm:w-[40px] w-[30%] hover:cursor-pointer'>
                         <Noty width={"100%"} color={"#000"} count={3} />
                     </Link>

@@ -745,10 +745,10 @@ const PropertiesFeed = () => {
             </div> */}
             <div className='w-[17%] '>
                     <div className='w-[100%]  lg:mr-10 md:mr-8 sm:mr-6 mr-4 my-1'>
-                        <button onClick={handlCancel} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 '> <img src={clear} alt='filter' className='w-[22%] '/>Clearfilter</button>
+                        <button onClick={handlCancel} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 '> <img src={clear} alt='filter' className='w-[15%] '/>Clearfilter</button>
                     </div>
                     <div className='w-[100%] lg:mr-10 md:mr-8 sm:mr-6 mr-4 mb-1'>
-                        <button onClick={handlClick} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1'> <img src={ssss} alt='filter' className='w-[22%]  mr-2'/>Filter</button>
+                        <button onClick={handlClick} className='flex justify-center items-center md:p-2 p-1  w-[100%] hover:bg-gray-600 hover:bg-opacity-20 lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] font-bold rounded-full border-2 border-black lg:px-4 md:px-3 sm:px-2 px-1'> <img src={ssss} alt='filter' className='w-[15%]  mr-2'/>Filter</button>
                     </div>
             </div>
             
